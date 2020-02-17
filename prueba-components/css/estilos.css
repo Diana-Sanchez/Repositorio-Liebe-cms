@@ -1,0 +1,96 @@
+/* Estilos segunda parte */
+#contenedor-texto{
+    width: 50%;
+    height: 500px;
+    float: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    color: black;
+    background-color: #effffb;
+}
+#contenedor-imagen{
+    width: 50%;
+    height: 500px;
+    background-color: #effffb;
+    float: left;
+    padding-top: 25px;
+    text-align: center;
+}
+#encabezado{
+    font-size: 50px;
+    color: #FC1757;
+    font-family: 'Libre Baskerville', serif;
+}
+#parrafo-informativo{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+/* Fin estilos segunda parte */
+
+/* Inicio estilos tercera parte*/
+#contenedor-parte-tres{
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+    font-size: 30px;
+    color: yellow;
+}
+
+#sub-1-3{
+    background-color: #ccda46;
+    height: 300px;
+    text-align: center;
+}
+#sub-2-2{
+    background-color: #f8b400;
+    height: 300px;
+    text-align: center;
+    color: #FC1757;
+}
+.titulo-caracteristica{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: black;
+    padding-top: 15px;
+    font-weight: 700;
+}
+.titulo-caracteristica:hover{
+    text-shadow: 0 0 30px #fff;
+    color: #0069D9;
+    
+
+    
+}
+.parrafo-c{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+
+}
+
+/* Inicio estilos cuarta parte*/
+#contenedor-p4{
+    width: 100%;
+    height: 300px;
+    background-color: #effffb;
+    
+}
+#contenedor-p5{
+    width: 100%;
+    height: 300px;
+    background-color: #FC1757;
+}
+#contenedor-p6{
+    width: 100%;
+    height: 300px;
+    background-color: #effffb;
+}
+
+
+
+
