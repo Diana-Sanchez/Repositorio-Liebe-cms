@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inria+Serif:700&display=swap" rel="stylesheet">
     <style>
+      
       #login{
         
         margin-right: 10px;
@@ -24,6 +25,10 @@
         background-color: #105e62 !important;
         
       }
+      .navbar{
+        z-index: 1;
+        position: fixed;
+      }
       #btn-crear-cuenta{
         padding: 5px 10px 5px 10px;
         background-color: transparent;
@@ -38,6 +43,7 @@
       #inicio:hover{
         color: #41aaa8;
       }
+      
       .contenedor{
         position: block;
         background: url("img/fondo1-unsplash.jpg"),no-repeat;
@@ -46,11 +52,6 @@
         height: 100vh;
         width: 100%;
       }
-      .navbar{
-        z-index: 1;
-        position: fixed;
-      }
-      
       #contenido-principal{
         font-size: 4.5em;
         color: white;
@@ -309,9 +310,11 @@
     }
     .posicion-iconos-s{
         transition: transform .5s;
+        padding-right: 1%;
     }
     .posicion-iconos-s:hover{
         transform:scale(1.25);
+        
     }
     .btn-informacion{
       padding: 8px 15px 8px 15px;
@@ -331,9 +334,9 @@
     #contenedor-row-price{
       text-align: center;
     }
-    .posicion-iconos-s{
-      padding-right: 1%;
-    }
+    
+    
+
     
   </style>
 </head>
