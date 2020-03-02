@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BodyLandingComponent } from './body-landing/body-landing.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
+import { AccesoComponent } from './acceso/acceso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BodyLandingComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    AccesoComponent
   ],
   imports: [
     BrowserModule,
