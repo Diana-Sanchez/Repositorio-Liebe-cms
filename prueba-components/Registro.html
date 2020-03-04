@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif:700&display=swap" rel="stylesheet">
+    <style>
+      .lbl-registro-proyecto{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: #105e62;
+      }
+      .input-registro{
+        width: 100%;
+        border-radius: 5px;
+      }
+      #contenedor-registro{
+        background-color: #c6f0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+      #btn-registro{
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        background-color: #b5525c;
+        color: white;
+        width: 100%;
+      }
+      #btn-registro:hover{
+       background-color: #c43544;
+      }
+      #contenedor-btn-registro{
+        margin-top: 15px;
+      }
+      #contenedor-fila-registro{
+        background-color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      #contenedor-fila-registro{
+        border-radius: 5px;
+        padding: 20px 15px 20px 15px;
+      }
+      #modo-registro{
+        color: #b5525c;
+        font-size: 16px;
+        float: right;
+        font-weight: 500;
+      }
+    </style>
+    
+</head>
+<body>
+  <div id="contenedor-registro">
+    <div class="container" id="contenedor-fila-registro">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <label for="" class="lbl-registro-proyecto">Dale un nombre a tu proyecto</label><br>
+            <input type="text" id="txt-nombre-proyecto" class="input-registro" autofocus><br>
+            <label for="" class="lbl-registro-proyecto">Ingresa una breve descripción</label><br>
+            <textarea name="" id="text-descripcion" cols="30" rows="3" class="input-registro"></textarea>
+            <button type="button" onclick="cambiarContenido()">Opción 1</button>
+            <button type="button">Opción 2</button>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <form action="" id="formulario-registro">
+            <h3>Registrate en Liebe</h3><br>
+            <label for="" id="modo-registro">Administrator mode</label><br>
+            <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label><br>
+            <input type="text" id="txt-correo" class="input-registro"><br>
+            <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
+            <input type="text" id="txt-nombre-usuario" class="input-registro"><br>
+            <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
+            <input type="text" id="txt-contrasena" class="input-registro"><br>
+            <label for="" class="lbl-registro-proyecto">Confirmar contraseña</label><br>
+            <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
+            <div id="contenedor-btn-registro"><button id="btn-registro">Registrarme</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+      
+      
+
+      
+     
+
+
+
+
+
+     
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/controlador.js"></script>
+</body>
+</html>
