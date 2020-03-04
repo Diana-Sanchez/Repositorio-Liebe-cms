@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: '',
     component: BodyLandingComponent
+  },
+  {
+    path:'inicio',
+    component: BodyLandingComponent 
   }
 
 ];

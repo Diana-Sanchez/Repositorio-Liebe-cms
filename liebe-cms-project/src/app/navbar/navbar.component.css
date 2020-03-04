@@ -1,32 +1,41 @@
 #login{
-    margin-right: 10px;
-  }
+  margin-right: 10px;
+}
 #anchor-login{
-    color: white;
-
-  }
+  color: white;
+}
 #anchor-login:hover{
-    text-decoration: none;
-    color: #41aaa8;
-  }
+  text-decoration: none;
+  color: #41aaa8;
+}
 .navbar-dark{
-    background-color: #105e62 !important;
-  }
-  .navbar{
-    z-index: 1;
-    
-  }
-#btn-crear-cuenta{
-    padding: 5px 10px 5px 10px;
-    background-color: transparent;
-    border-color: #99d8d0;
-    color: white;
-    border-radius: 5px;
-  }
-#btn-crear-cuenta:hover{
-    background-color: #99d8d0;
-    color: black;
-  }
+  background-color: #105e62 !important;
+}
+.navbar{
+  z-index: 1;
+}
+.btn-secondary{
+  margin-right: 18px;
+  margin-left: 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: transparent;
+  border-color: #99d8d0;
+  color: white;
+  border-radius: 5px;
+}
+.btn-secondary:focus{
+  margin-right: 18px;
+  margin-left: 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: transparent;
+  border-color: #99d8d0;
+  color: white;
+  border-radius: 5px;
+}
+.dropdown-item:hover{
+  background-color: #99d8d0;
+  color: black;
+}
 #inicio:hover{
-    color: #41aaa8;
-  }
+  color: #41aaa8;
+}
