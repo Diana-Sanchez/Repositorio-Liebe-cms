@@ -1,3 +1,3 @@
 function cambiarContenido(){
-    document.getElementById("modo-registro").innerHTML = "Diana"
+    document.getElementById("modo-registro").innerHTML = "User mode"
 }

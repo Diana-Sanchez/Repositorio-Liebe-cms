@@ -27,6 +27,7 @@
     font-size: 16px;
     background-color: #b5525c;
     color: white;
+    width: 100%;
   }
   #btn-login:hover{
     background-color: #c43544;

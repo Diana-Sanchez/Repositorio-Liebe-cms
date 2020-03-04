@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AccesoComponent } from './acceso/acceso.component';
 import { BodyLandingComponent } from './body-landing/body-landing.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'inicio',
     component: BodyLandingComponent 
+  },
+  {
+    path: 'registro',
+    component: RegistroComponent
   }
 
 ];

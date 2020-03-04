@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BodyLandingComponent } from './body-landing/body-landing.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { AccesoComponent } from './acceso/acceso.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AccesoComponent } from './acceso/acceso.component';
     NavbarComponent,
     BodyLandingComponent,
     PiePaginaComponent,
-    AccesoComponent
+    AccesoComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
