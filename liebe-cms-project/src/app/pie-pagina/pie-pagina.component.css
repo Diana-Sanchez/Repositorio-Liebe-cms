@@ -2,6 +2,7 @@
     width: 100%;
     background-color: #105e62;
     padding-bottom: 3%;
+    float: left;
  }
  .posicion-fila-footer{
    padding-top: 5%;

@@ -6,11 +6,89 @@
     <title>Registro</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inria+Serif:700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif:700&display=swap" rel="stylesheet">
+    <style>
+      #contenedor-panel-admin{
+        width: 15%;
+        height: 100vh;
+        background-color: #99d8d0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .categoria-admin{
+        font-size: 13px;
+        font-weight: 600;
+        padding-left: 10px;
+        font-family: 'Inria Serif';
+      }
+      #titulo-panel{
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: #105e62;
+        font-weight: 700;
+      }
+      .contenido-categorias{
+        padding-top: 1.5px;
+        padding-bottom: 1.5px;
+        padding-left: 10px;
+        
+      }
+      .contenido-categorias:hover{
+        background-color: #41a5aa;
+        color: white;
+        
+      }
+      .posicion-i{
+        float: left;
+        padding-left: 10px;
+        padding-right: 15px;
+      }
+      .contenido-a:hover{
+        text-decoration: none;
+        color: black;
+      }
+      .contenido-a{
+        font-size: 13px;
+        color: black;
+        text-decoration: none;
+      }
+      hr{
+        background-color: white;
+      }
+    </style>
 </head>
 <body>
-  <aside id="contenedor-panel-admin">
-    
+  <aside id="contenedor-panel-admin"> 
+    <div id="titulo-panel">Panel administrador</div>
+    <div><i class="fas fa-home posicion-i"></i></div>
+    <div class="categoria-admin">Inicio</div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">Liebe administración</a></div>
+    <hr>
+    <div><i class="fas fa-user posicion-i"></i></div>
+    <div class="categoria-admin">Usuarios</div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">todos los usuarios</a></div>
+    <hr>
+    <div><i class="fas fa-file-alt posicion-i"></i></div>
+    <div class="categoria-admin">Páginas</div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">todas las páginas</a></div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">página principal</a></div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">nueva página</a></div>
+    <hr>
+    <div><i class="fas fa-comments posicion-i"></i></div>
+    <div class="categoria-admin">Comentarios</div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">comentarios</a></div>
+    <hr>
+    <div><i class="fas fa-photo-video posicion-i"></i></div>
+    <div class="categoria-admin">Multimedia</div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">visualizar todo</a></div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">añadir multimedia</a></div>
+    <hr>
+    <div><i class="fas fa-palette posicion-i"></i></div>
+    <div class="categoria-admin">Personalización</div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">todos los temas</a></div>
+    <div class="contenido-categorias"><a class="contenido-a" href="">añadir nuevo tema</a></div>
+    <hr>
   </aside>
   
       
@@ -28,7 +106,7 @@
 
 
 
-
+  <script src="https://kit.fontawesome.com/bd58c78430.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

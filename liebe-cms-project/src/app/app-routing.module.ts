@@ -31,7 +31,7 @@ const routes: Routes = [
     component: AdminPrincipalComponent,
     children:[
       {
-        path: 'inicio',
+        path: '',
         component: InicioComponent
       }
     ]
