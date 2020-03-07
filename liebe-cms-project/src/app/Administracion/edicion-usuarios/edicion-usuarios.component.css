@@ -12,7 +12,7 @@
   padding-top: 12px;
   font-size: 1.2em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #b2525c;
+  color: #b5525c;
   padding-bottom: 18px;
   padding-bottom: 30px;
 }
@@ -22,20 +22,6 @@
   font-size: 1.7em;
   margin-right: 10px;
   padding-bottom: 10px;
-}
-.personalizacion-tabla{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
-}
-.tabla-encabezado{
-  color: #105e62;
-}
-.anchor-acciones{
-  color: #b5525c;
-  padding-left: 5px;
-}
-.anchor-acciones:hover{
-  color: #b5525c;
 }
 .btn-nuevo-usuario{
   padding: 10px 20px 10px 10px;
@@ -49,4 +35,20 @@
 }
 #contenedor-nuevo-usuario{
   float: right;
+}
+.lbl-registro-proyecto{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #105e62;
+}
+.input-registro{
+  width: 100%;
+  border-radius: 5px;
+}
+#contenedor-btn-registro{
+  margin-top: 15px;
+}
+#contenedor-añadir{
+  margin-top: 20px;
+
 }

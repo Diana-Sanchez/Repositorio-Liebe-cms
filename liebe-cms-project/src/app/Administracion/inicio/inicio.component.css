@@ -5,6 +5,7 @@
   font-size: 1.7em;
   color:  #b5525c;
   font-family: 'Inria Serif';
+  padding-top: 20px;
 }
 #informacion{
   padding-top: 12px;
@@ -32,12 +33,15 @@
 #indicador-pagina{
   font-family: 'Inria Serif';
   color: #105e62;
-  font-size: 1em;
+  font-size: 1.7em;
+  margin-right: 10px;
 
 }
 .posicion-icono{
   float: left;
-  padding-right: 20px;
+  font-size: 35px;
+  margin-right: 10px;
+  color: #105e62;
 }
 .explicacion-funcionalidad{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

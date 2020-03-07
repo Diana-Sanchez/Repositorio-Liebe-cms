@@ -1,7 +1,7 @@
 .modificacion-iconos{
   font-size: 2em;
   text-align: center;
-  color: #105e62;
+  color: #b2525c;
   
 }
 hr{
@@ -20,16 +20,22 @@ hr{
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   margin-top: 5px;
+  text-align: center;
 }
 .contenedor-opcion-menu:active{
-  border:solid 5px #6bc5d2;
+  border:solid 3px #6bc5d2;
 }
 .contenedor-opcion-menu:hover{
-  background-color: #b5525c80;
-  color:white;
+  background-color: #d2fafb;
+  border:solid 3px #105e62;
 }
 .nombre-icono{
-  text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
+  color: #b2525c;
+}
+.nombre-icono:hover{
+  cursor: default;
+  color: #105e62;
+  text-decoration: none;
 }

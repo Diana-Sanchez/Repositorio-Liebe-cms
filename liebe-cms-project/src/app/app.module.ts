@@ -13,6 +13,8 @@ import { AdminPrincipalComponent } from './Administracion/admin-principal/admin-
 import { PanelComponent } from './Administracion/panel/panel.component';
 import { InicioComponent } from './Administracion/inicio/inicio.component';
 import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
+import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
+import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
 
 
 
@@ -28,6 +30,8 @@ import { UsuariosComponent } from './Administracion/usuarios/usuarios.component'
     PanelComponent,
     InicioComponent,
     UsuariosComponent,
+    NuevoUsuarioComponent,
+    EdicionUsuariosComponent,
     
   ],
   imports: [

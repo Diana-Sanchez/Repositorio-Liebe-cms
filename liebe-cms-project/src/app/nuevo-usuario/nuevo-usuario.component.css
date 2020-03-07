@@ -1,0 +1,54 @@
+#contenedor-principal-usuarios{
+    width: 100%;
+    padding: 30px 20px 50px 20px;
+  }
+  .posicion-icono{
+    float: left;
+    margin-right: 10px;
+    font-size: 35px;
+    color: #105e62;
+  }
+  #explicacion-area{
+    padding-top: 12px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b5525c;
+    padding-bottom: 18px;
+    padding-bottom: 30px;
+  }
+  #indicador-pagina{
+    font-family: 'Inria Serif';
+    color: #105e62;
+    font-size: 1.7em;
+    margin-right: 10px;
+    padding-bottom: 10px;
+  }
+  .btn-nuevo-usuario{
+    padding: 10px 20px 10px 10px;
+    background-color: #b5525c;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+  }
+  .btn-nuevo-usuario:hover{
+    background-color: #c43544;
+  }
+  #contenedor-nuevo-usuario{
+    float: right;
+  }
+  .lbl-registro-proyecto{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #105e62;
+  }
+  .input-registro{
+    width: 100%;
+    border-radius: 5px;
+  }
+  #contenedor-btn-registro{
+    margin-top: 15px;
+  }
+  #contenedor-añadir{
+    margin-top: 20px;
+
+  }

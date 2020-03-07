@@ -5,7 +5,9 @@ import { BodyLandingComponent } from './body-landing/body-landing.component';
 import { RegistroComponent } from './registro/registro.component';
 import { AdminPrincipalComponent } from './Administracion/admin-principal/admin-principal.component';
 import { InicioComponent } from './Administracion/inicio/inicio.component';
-import { AppComponent } from './app.component';
+import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
+import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
+import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
 
 
 
@@ -33,6 +35,22 @@ const routes: Routes = [
       {
         path: '',
         component: InicioComponent
+      },
+      {
+        path: 'usuarios',
+        component: UsuariosComponent
+      },
+      {
+        path: 'home',
+        component: InicioComponent 
+      },
+      {
+        path:'nuevo-usuario',
+        component: NuevoUsuarioComponent
+      },
+      {
+        path: 'edicion-usuario',
+        component: EdicionUsuariosComponent
       }
     ]
 }
