@@ -15,6 +15,7 @@ import { InicioComponent } from './Administracion/inicio/inicio.component';
 import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
 import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
 import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
+import { PaginasComponent } from './Administracion/paginas/paginas.component';
 
 
 
@@ -32,6 +33,7 @@ import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edic
     UsuariosComponent,
     NuevoUsuarioComponent,
     EdicionUsuariosComponent,
+    PaginasComponent,
     
   ],
   imports: [

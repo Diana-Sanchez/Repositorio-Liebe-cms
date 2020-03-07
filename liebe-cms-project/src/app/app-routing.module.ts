@@ -8,13 +8,15 @@ import { InicioComponent } from './Administracion/inicio/inicio.component';
 import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
 import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
 import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
+import { AppComponent } from './app.component';
+import { PaginasComponent } from './Administracion/paginas/paginas.component';
 
 
 
 const routes: Routes = [
   {
     path: '',
-    component: BodyLandingComponent,
+    component: BodyLandingComponent
   },
   {
     path: 'acceso',
@@ -39,6 +41,10 @@ const routes: Routes = [
       {
         path: 'usuarios',
         component: UsuariosComponent
+      },
+      {
+        path: 'paginas',
+        component: PaginasComponent
       },
       {
         path: 'home',

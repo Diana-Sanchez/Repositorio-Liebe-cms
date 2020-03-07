@@ -1,65 +1,75 @@
-<div id="contenedor-principal-usuarios">
-  <div id="usuarios-cabecera">
+<div id="contenedor-paginas">
+  <div id="nota-informativa">
+    En esta sección de la administración puedes visualizar todos los usuarios que tú como administrador has creado. Existen dos tipos de usuarios; los que asumen el rol de administrador y los usuarios con roles básicos.
+  </div>
+  <div id="paginas-cabecera">
     <div><i class="fas fa-users posicion-icono"></i></div>
     <div id="indicador-pagina">Usuarios</div>
-    <div id="contenedor-nuevo-usuario">
-      <button class="btn-nuevo-usuario" routerLink="/admin/nuevo-usuario">Nuevo usuario</button>
+    <div id="contenedor-nueva-pagina">
+      <button class="btn-nueva-pagina" routerLink="/admin/nuevo-usuario">Añadir usuario</button>
     </div>
-    <div id="explicacion-area">Personal registrado en tu plataforma.</div>
+    <div id="explicacion-area">Personas registradas en tu plataforma.</div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Correo electrónico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><b>Diana Sánchez</b><br><a class="acciones-paginas" href="" routerLink = "/admin/edicion-usuario">editar</a></td>
+          <td>diana-s</td>
+          <td>admin</td>
+          <td>yolibeth@gmail.com</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
+          <td>montse-s</td>
+          <td>user-n</td>
+          <td>montse.com</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Bessy Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
+          <td>bessy-s</td>
+          <td>user-n</td>
+          <td>bessy.com</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
+          <td>montse-s</td>
+          <td>user-n</td>
+          <td>montse.com</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
+          <td>montse-s</td>
+          <td>user-n</td>
+          <td>montse.com</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
+          <td>montse-s</td>
+          <td>user-n</td>
+          <td>montse.com</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
+          <td>montse-s</td>
+          <td>user-n</td>
+          <td>montse.com</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <table class="table personalizacion-tabla">
-    <thead>
-      <tr>
-        <th scope="col" class="tabla-encabezado">#</th>
-        <th scope="col" class="tabla-encabezado">Nombre</th>
-        <th scope="col" class="tabla-encabezado">Nombre de usuario</th>
-        <th scope="col" class="tabla-encabezado">Correo electrónico</th>
-        <th scope="col" class="tabla-encabezado">Tipo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td><b>Diana Sánchez</b><a class="anchor-acciones" href="" routerLink="/admin/edicion-usuario">editar</a></td>
-        <td>diana-s</td>
-        <td>yolibeth.diana@gmail.com</td>
-        <td>admin</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Montserrat Sánchez <a class="anchor-acciones" href="">editar</a> <a class="anchor-acciones" href="">eliminar</a> </td>
-        <td>montse-s</td>
-        <td>montse@gmail.com</td>
-        <td>admin</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Ledys Santos <a class="anchor-acciones" href="">editar</a> <a class="anchor-acciones" href="">eliminar</a> </td>
-        <td>ledys-s</td>
-        <td>ledys@gmail.com</td>
-        <td>user-n</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Óscar Cáceres <a class="anchor-acciones" href="">editar</a> <a class="anchor-acciones" href="">eliminar</a> </td>
-        <td>oscar-c</td>
-        <td>oscar.caceres@gmail.com</td>
-        <td>admin</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Luis Solano <a class="anchor-acciones" href="">editar</a> <a class="anchor-acciones" href="">eliminar</a> </td>
-        <td>luis-s</td>
-        <td>luis-s@gmail.com</td>
-        <td>user-n</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Carlos López <a class="anchor-acciones" href="">editar</a> <a class="anchor-acciones" href="">eliminar</a> </td>
-        <td>carlos-l</td>
-        <td>carlos@gmail.com</td>
-        <td>user-n</td>
-      </tr>
-    </tbody>
-  </table>
 </div>
