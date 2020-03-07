@@ -12,6 +12,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { AdminPrincipalComponent } from './Administracion/admin-principal/admin-principal.component';
 import { PanelComponent } from './Administracion/panel/panel.component';
 import { InicioComponent } from './Administracion/inicio/inicio.component';
+import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
 
 
 
@@ -26,6 +27,7 @@ import { InicioComponent } from './Administracion/inicio/inicio.component';
     AdminPrincipalComponent,
     PanelComponent,
     InicioComponent,
+    UsuariosComponent,
     
   ],
   imports: [
