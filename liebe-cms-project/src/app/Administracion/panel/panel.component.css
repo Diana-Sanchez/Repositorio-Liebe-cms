@@ -1,49 +1,35 @@
-#contenedor-panel-admin{
-    width: 15%;
-    height: 100vh;
-    background-color: #99d8d0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    float: left;
-  }
-  .categoria-admin{
-    font-size: 13px;
-    font-weight: 600;
-    padding-left: 10px;
-    font-family: 'Inria Serif';
-  }
-  #titulo-panel{
-    text-align: center;
-    font-size: 16px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    color: #105e62;
-    font-weight: 700;
-  }
-  .contenido-categorias{
-    padding-top: 1.5px;
-    padding-bottom: 1.5px;
-    padding-left: 10px;
-    
-  }
-  .contenido-categorias:hover{
-    background-color: #41a5aa;
-    color: white;
-    
-  }
-  .posicion-i{
-    float: left;
-    padding-left: 10px;
-    padding-right: 15px;
-  }
-  .contenido-a:hover{
-    text-decoration: none;
-    color: black;
-  }
-  .contenido-a{
-    font-size: 13px;
-    color: black;
-    text-decoration: none;
-  }
-  hr{
-    background-color: white;
-  }
+.modificacion-iconos{
+  font-size: 2em;
+  text-align: center;
+  color: #105e62;
+  
+}
+hr{
+  width: 100%;
+  border-color: #105e62;
+}
+#contenedor-menu{
+  width: 100%;
+  padding: 10px;
+}
+#nombre-admnin{
+  font-size: 13px;
+}
+.contenedor-opcion-menu{
+  border:solid 2px #105e62;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.contenedor-opcion-menu:active{
+  border:solid 5px #6bc5d2;
+}
+.contenedor-opcion-menu:hover{
+  background-color: #b5525c80;
+  color:white;
+}
+.nombre-icono{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
