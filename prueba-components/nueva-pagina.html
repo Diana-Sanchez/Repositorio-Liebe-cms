@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif:700&display=swap" rel="stylesheet">
+    <style>
+      #contenedor-paginas{
+        width: 100%;
+        padding: 30px 50px 50px 30px;
+      }
+      .posicion-icono{
+        float: left;
+        margin-right: 10px;
+        color: #105e62;
+        font-size: 35px;
+      }
+      #explicacion-area{
+        padding-top: 12px;
+        font-size: 1.2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #105e62;
+        padding-bottom: 20px;
+      }
+      #indicador-pagina{
+        font-family: 'Inria Serif';
+        color: #105e62;
+        font-size: 1.7em;
+        margin-right: 10px;
+        padding-bottom: 10px;
+      }
+      .btn-nueva-pagina{
+        padding: 10px 20px 10px 10px;
+        background-color: #105e62;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+      }
+      .btn-cerrar-pagina-prueba{
+        padding: 10px 20px 10px 10px;
+        background-color: #b2525c;
+        border-radius: 5px;
+        color: white;
+        text-align: center
+      }
+      .btn-cerrar-pagina-prueba:hover{
+        background-color: #c43544;
+      }
+      .btn-nueva-pagina:hover{
+        background-color: #0c3c3f;
+      }
+      #contenedor-nueva-pagina{
+        float: right;
+      }
+      #nota-informativa{
+        width: 100%;
+        padding: 25px 15px 25px 15px;
+        border-radius: 5px;
+        background-color: #d2fafb;
+        margin-bottom: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color:#105e62
+      }
+      #txt-nombre-pagina{
+        width: 100%;
+        padding: 10px 5px 10px 5px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      #bienvenido-pagina{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        color: #105e62;
+      }
+      #bienvenido-pagina{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 2em;
+        font-weight: 500;
+        color: darkgoldenrod;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #contenedor-img-prueba{
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #parrafo-prueba{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 16px;
+        text-align: justify;
+      }
+      #fila-opciones{
+        margin-bottom: 20px;
+      }
+      .input-opciones-paginas{
+        border-radius: 5px;
+        padding: 3px 5px 3px 5px;
+        width: 100%;
+        color: #105e62;
+      }
+      .opciones-paginas{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: #105e62;
+      }
+      .contenedor-opciones-finales{
+        float: left;
+        margin-left: 5px;
+        margin-top: 10px;
+      }
+      #indicacion-area{
+        padding-top: 12px;
+        font-size: 1.2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #b2525c;
+        padding-bottom: 20px;
+      }
+    </style>
+</head>
+<body>
+  <div id="contenedor-paginas">
+    <div id="nota-informativa">
+      Desde aquí puedes añadir a tu sitio las páginas que desees, Liebe te permite visualizar de manera inmediata tu diseño.
+    </div>
+    <div id="paginas-cabecera">
+      <div>
+        <i class="fas fa-file-alt posicion-icono"></i>
+      </div>
+      <div id="indicador-pagina">Páginas</div>
+      <div id="contenedor-nueva-pagina">
+        <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Guardar página</button>
+      </div>
+      <div id="contenedor-nueva-pagina">
+          <button type="button" class="btn-nueva-pagina" data-toggle="modal" data-target="#exampleModal">
+            Vista previa
+          </button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialoaria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: #b2525c;">Nombre de la página</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="bienvenido-pagina">
+              Make up 
+            </div>
+            <div id="contenedor-img-prueba">
+              <img src="img/img-pagina-prueba.jpg">
+            </div>
+            <div id="parrafo-prueba">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere reiciendis deleniti soluta ipsum consequatur voluptas modi sapiente veritatis nostrum quod. Hic dolor in non ratione, eveniet assumenda architecto fuga voluptate.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-cerrar-pagina-prueba" data-dismiss="modal">Cerrar vista previa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="explicacion-area">Añadir página.</div>
+    <label class="opciones-paginas">Nombre de la página</label>
+    <div id="contenedor-nombre-pagina">
+      <input type="text" id="txt-nombre-pagina" autofocus>
+    </div>
+    <div class="container-fluid">
+      <div class="row" id="fila-opciones">
+        <div class="col-sm">
+          <label for="" class="opciones-paginas">Palabras claves</label>
+          <div>
+            <input type="text" class="input-opciones-paginas">
+          </div>
+          <div class="contenedor-opciones-finales">
+            <input type="checkbox" class="input-opciones-paginas">
+          </div>
+          <div class="contenedor-opciones-finales">
+            <label for="" class="opciones-paginas">Incluir encabezado de la página principal</label>
+          </div>
+        </div>
+        <div class="col-sm">
+          <label for="" class="opciones-paginas">Breve descripción</label>
+          <div>
+            <input type="text" class="input-opciones-paginas">
+          </div>
+          <div class="contenedor-opciones-finales">
+            <input type="checkbox" class="input-opciones-paginas">
+          </div>
+          <div class="contenedor-opciones-finales">
+            <label for="" class="opciones-paginas">Incluir pie de página de la página principal</label>
+          </div>
+        </div>
+        <div class="col-sm">
+          <label for="" class="opciones-paginas">Titulos para el menú</label>
+          <div>
+            <input type="text" class="input-opciones-paginas">
+          </div>
+          <div class="contenedor-opciones-finales">
+            <input type="checkbox" class="input-opciones-paginas" checked>
+          </div>
+          <div class="contenedor-opciones-finales">
+            <label for="" class="opciones-paginas">Incluir en el menu</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="ckeditor/ckeditor/ckeditor.js"></script>
+  <script src="https://kit.fontawesome.com/bd58c78430.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/controlador.js"></script>
+</body>
+</html>

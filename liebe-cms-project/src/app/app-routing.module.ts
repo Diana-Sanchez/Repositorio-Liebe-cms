@@ -10,25 +10,32 @@ import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
 import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
 import { AppComponent } from './app.component';
 import { PaginasComponent } from './Administracion/paginas/paginas.component';
+import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
 
 
 
 const routes: Routes = [
   {
-    path: '',
-    component: BodyLandingComponent
-  },
-  {
-    path: 'acceso',
-    component: AccesoComponent
-  },
-  {
-    path: 'registro',
-    component: RegistroComponent
-  },
-  {
-    path: 'inicio',
-    component: BodyLandingComponent
+    path: 'liebe',
+    component: HomePrincipalComponent,
+    children: [
+      {
+        path:'',
+        component: BodyLandingComponent
+      },
+      {
+        path: 'acceso',
+        component: AccesoComponent
+      },
+      {
+        path: 'registro',
+        component: RegistroComponent
+      },
+      {
+        path: 'inicio',
+        component: BodyLandingComponent
+      }
+    ]
   },
   {
     path: 'admin',
