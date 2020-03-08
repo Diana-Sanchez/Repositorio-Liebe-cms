@@ -106,6 +106,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
         color: #105e62;
+        margin-top: 10px;
       }
       .contenedor-opciones-finales{
         float: left;
@@ -134,7 +135,7 @@
         text-align: center;
       }
       .estilos-add{
-        font-size: 50px;
+        font-size: 40px;
         color: white;
       }
       #add{
@@ -175,7 +176,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: #b2525c;">Nombre de la página</h5>
+            <h5 class="modal-title" id="exampleModalLabel" style="color: #b2525c;">Página principal</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -209,11 +210,9 @@
           <div>
             <input type="text" class="input-opciones-paginas">
           </div>
-          <div class="contenedor-opciones-finales">
-            <input type="checkbox" class="input-opciones-paginas">
-          </div>
-          <div class="contenedor-opciones-finales">
-            <label for="" class="opciones-paginas">Incluir encabezado de la página principal</label>
+          <label for="" class="opciones-paginas"><b>Encabezado genérico</b></label>
+          <div>
+            <input type="text" class="input-opciones-paginas">
           </div>
         </div>
         <div class="col-sm">
@@ -221,23 +220,15 @@
           <div>
             <input type="text" class="input-opciones-paginas">
           </div>
-          <div class="contenedor-opciones-finales">
-            <input type="checkbox" class="input-opciones-paginas">
-          </div>
-          <div class="contenedor-opciones-finales">
-            <label for="" class="opciones-paginas">Incluir pie de página de la página principal</label>
-          </div>
-        </div>
-        <div class="col-sm">
-          <label for="" class="opciones-paginas">Titulos para el menú</label>
+          <label for="" class="opciones-paginas"><b>Pie de página genérico</b></label>
           <div>
             <input type="text" class="input-opciones-paginas">
           </div>
-          <div class="contenedor-opciones-finales">
-            <input type="checkbox" class="input-opciones-paginas" checked>
-          </div>
-          <div class="contenedor-opciones-finales">
-            <label for="" class="opciones-paginas">Incluir en el menu</label>
+        </div>
+        <div class="col-sm">
+          <label for="" class="opciones-paginas">Título para el menú</label>
+          <div>
+            <input type="text" class="input-opciones-paginas">
           </div>
         </div>
       </div>

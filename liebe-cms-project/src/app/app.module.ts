@@ -20,7 +20,7 @@ import { PaginasComponent } from './Administracion/paginas/paginas.component';
 import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
 import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
 import { FooterAdminComponent } from './Administracion/footer-admin/footer-admin.component';
-
+import { RecursosComponent } from './Administracion/recursos/recursos.component';
 
 
 
@@ -41,12 +41,14 @@ import { FooterAdminComponent } from './Administracion/footer-admin/footer-admin
     PaginasComponent,
     NuevaPaginaComponent,
     HomePrincipalComponent,
-    FooterAdminComponent
+    FooterAdminComponent,
+    RecursosComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     
     
   ],

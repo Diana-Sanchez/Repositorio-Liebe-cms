@@ -11,6 +11,8 @@ import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edic
 import { AppComponent } from './app.component';
 import { PaginasComponent } from './Administracion/paginas/paginas.component';
 import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
+import { RecursosComponent } from './Administracion/recursos/recursos.component';
+import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
 
 
 
@@ -54,6 +56,10 @@ const routes: Routes = [
         component: PaginasComponent
       },
       {
+        path: 'nueva-pagina',
+        component: NuevaPaginaComponent
+      },
+      {
         path: 'home',
         component: InicioComponent 
       },
@@ -65,6 +71,10 @@ const routes: Routes = [
         path: 'edicion-usuario',
         component: EdicionUsuariosComponent
       },
+      {
+        path: 'recursos',
+        component: RecursosComponent
+      }
       
     ]
 }
