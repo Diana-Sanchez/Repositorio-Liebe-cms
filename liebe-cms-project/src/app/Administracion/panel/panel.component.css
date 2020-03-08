@@ -2,25 +2,35 @@
   font-size: 2em;
   text-align: center;
   color: #b2525c;
-  
 }
-hr{
-  width: 100%;
-  border-color: #105e62;
+#panel-admin{
+  padding-bottom: 10px;
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  margin-right: 20px;
+}
+#salir{
+  color: white;
+}
+#salir:hover{
+  color: #6bc5d2;
+  text-decoration: none;
+
 }
 #contenedor-menu{
   width: 100%;
-  padding: 10px;
+  padding-top: 20px;
+  background-color: #105e62;
 }
 #nombre-admnin{
   font-size: 13px;
 }
 .contenedor-opcion-menu{
   border:solid 2px #105e62;
-  padding: 5px 10px 5px 10px;
   border-radius: 5px;
-  margin-top: 5px;
   text-align: center;
+  background-color: white;
 }
 .contenedor-opcion-menu:active{
   border:solid 3px #6bc5d2;
