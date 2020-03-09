@@ -23,6 +23,7 @@ import { FooterAdminComponent } from './Administracion/footer-admin/footer-admin
 import { RecursosComponent } from './Administracion/recursos/recursos.component';
 import { EntradasComponent } from './Administracion/entradas/entradas.component';
 import { NuevaEntradaComponent } from './Administracion/nueva-entrada/nueva-entrada.component';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 
 
 
@@ -48,6 +49,7 @@ import { NuevaEntradaComponent } from './Administracion/nueva-entrada/nueva-entr
     RecursosComponent,
     EntradasComponent,
     NuevaEntradaComponent,
+    RegistroUsuarioComponent,
    
     
   ],

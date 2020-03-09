@@ -13,6 +13,7 @@ import { HomePrincipalComponent } from './Home/home-principal/home-principal.com
 import { RecursosComponent } from './Administracion/recursos/recursos.component';
 import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
 import { EntradasComponent } from './Administracion/entradas/entradas.component';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 
 
 
@@ -31,12 +32,16 @@ const routes: Routes = [
         component: AccesoComponent
       },
       {
-        path: 'registro',
+        path: 'registro-admin',
         component: RegistroComponent
       },
       {
         path: 'inicio',
         component: BodyLandingComponent
+      },
+      {
+        path: 'registro-usuario',
+        component: RegistroUsuarioComponent
       }
     ]
   },

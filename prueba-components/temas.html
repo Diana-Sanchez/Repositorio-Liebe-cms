@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nueva entrada</title>
+    <title>Temas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inria+Serif:700&display=swap" rel="stylesheet">
@@ -106,6 +106,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
         color: #105e62;
+        margin-top: 10px;
       }
       .contenedor-opciones-finales{
         float: left;
@@ -119,6 +120,36 @@
         color: #b2525c;
         padding-bottom: 20px;
       }
+      #disenio{
+        margin-top: 30px;
+      }
+      .mas-opciones{
+        padding-bottom: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: #105e62;
+        font-weight: 600;
+        text-align: center;
+      }
+      #contenedor-txt-area{
+        text-align: center;
+      }
+      .estilos-add{
+        font-size: 40px;
+        color: white;
+      }
+      #add{
+        padding: 20px 30px 20px 30px;
+        background-color: #b2525c;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      #add:hover{
+        background-color: #c43544;
+      }
+      #cont-add{
+        text-align: center;
+      }
       #contenedor-aplicar{
         margin-top: 20px;
       }
@@ -127,15 +158,15 @@
 <body>
   <div id="contenedor-paginas">
     <div id="nota-informativa">
-      Realiza aquí todas las entradas que necesites, Liebe te permite visualizar de manera previa todas tus creaciones.
+      Incorpora temas o plantillas para mejorar la apariencia de tu sitio.
     </div>
     <div id="paginas-cabecera">
       <div>
-        <i class="fas fa-mail-bulk posicion-icono"></i>
+        <i class="fas fa-palette posicion-icono"></i>
       </div>
-      <div id="indicador-pagina">Entradas</div>
+      <div id="indicador-pagina">Personalización</div>
       <div id="contenedor-nueva-pagina">
-        <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Guardar entrada</button>
+        <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Guardar tema</button>
       </div>
       <div id="contenedor-nueva-pagina">
           <button type="button" class="btn-nueva-pagina" data-toggle="modal" data-target="#exampleModal">
@@ -148,14 +179,14 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: #b2525c;">Nombre de la entrada</h5>
+            <h5 class="modal-title" id="exampleModalLabel" style="color: #b2525c;">Nombre tema</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <div id="bienvenido-pagina">
-              Make up 
+              Professional club 
             </div>
             <div id="contenedor-img-prueba">
               <img src="img/img-pagina-prueba.jpg">
@@ -170,20 +201,38 @@
         </div>
       </div>
     </div>
-    <div id="explicacion-area">Nueva entrada.</div>
-    <label class="opciones-paginas">Nombre de la entrada</label>
+    <div id="explicacion-area">Creación de temas.</div>
+    <label class="opciones-paginas">Nombre del tema</label>
     <div id="contenedor-nombre-pagina">
       <input type="text" id="txt-nombre-pagina" autofocus>
     </div>
-    <div style="margin-bottom: 10px;" class="opciones-paginas">
-      <input type="radio" autofocus name="comentarios"> Permitir comentarios
-    </div>
-    <div style="margin-bottom: 10px;" class="opciones-paginas">
-      <input type="radio" autofocus name="comentarios"> No permitir comentarios
+    <label class="opciones-paginas">Descripción</label>
+    <div id="contenedor-nombre-pagina">
+      <input type="text" id="txt-nombre-pagina" autofocus>
     </div>
     <textarea id="ckeditor" class="ckeditor"></textarea>
     <div id="contenedor-aplicar">
       <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Agregar contenido</button>
+    </div>
+    <div id="disenio">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="mas-opciones">Añade recursos multimedia</div>
+            <div id="cont-add"><button id="add"><i class="fas fa-plus-circle estilos-add"></i></button></div>
+          </div>
+          <div class="col-sm">
+            <div class="mas-opciones">CSS adicional</div>
+            <div id="contenedor-txt-area">
+              <textarea name="" id="" cols="30" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="mas-opciones">JavaScript adicional</div>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
