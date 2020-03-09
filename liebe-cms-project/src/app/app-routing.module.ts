@@ -8,11 +8,12 @@ import { InicioComponent } from './Administracion/inicio/inicio.component';
 import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
 import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
 import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
-import { AppComponent } from './app.component';
 import { PaginasComponent } from './Administracion/paginas/paginas.component';
 import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
 import { RecursosComponent } from './Administracion/recursos/recursos.component';
 import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
+import { EntradasComponent } from './Administracion/entradas/entradas.component';
+
 
 
 
@@ -26,7 +27,7 @@ const routes: Routes = [
         component: BodyLandingComponent
       },
       {
-        path: 'acceso',
+        path: 'admin',
         component: AccesoComponent
       },
       {
@@ -44,7 +45,7 @@ const routes: Routes = [
     component: AdminPrincipalComponent,
     children:[
       {
-        path: '',
+        path: 'home',
         component: InicioComponent
       },
       {
@@ -74,6 +75,10 @@ const routes: Routes = [
       {
         path: 'recursos',
         component: RecursosComponent
+      },
+      {
+        path: 'entradas',
+        component: EntradasComponent
       }
       
     ]

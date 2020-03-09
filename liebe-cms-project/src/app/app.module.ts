@@ -21,6 +21,9 @@ import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina
 import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
 import { FooterAdminComponent } from './Administracion/footer-admin/footer-admin.component';
 import { RecursosComponent } from './Administracion/recursos/recursos.component';
+import { EntradasComponent } from './Administracion/entradas/entradas.component';
+import { NuevaEntradaComponent } from './Administracion/nueva-entrada/nueva-entrada.component';
+
 
 
 
@@ -42,7 +45,10 @@ import { RecursosComponent } from './Administracion/recursos/recursos.component'
     NuevaPaginaComponent,
     HomePrincipalComponent,
     FooterAdminComponent,
-    RecursosComponent
+    RecursosComponent,
+    EntradasComponent,
+    NuevaEntradaComponent,
+   
     
   ],
   imports: [
