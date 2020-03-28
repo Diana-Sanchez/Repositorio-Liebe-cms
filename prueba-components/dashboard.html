@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        #contenedor-dashboard{
+            width: 7%;
+            height: 100vh;
+            background-color: #105e62;
+            float: left;
+            position: fixed;
+            
+            
+        }
+        .icono-dashboard{
+            font-size: 30px;
+            color:white;
+        }
+        .opcion-dashboard{
+            padding-top: 18px;
+            text-align: center;
+            padding-bottom: 18px;
+        }
+        .opcion-dashboard:hover{
+            background-color: #b5525c;
+        }
+        .opcion-dashboar:active{
+            background-color: yellowgreen;
+        }
+        .nombre-opcion{
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        /* Estilos del componente de Inicio*/
+        #contenedor-administracion-inicio{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 70px;
+            float: right;
+            width: 93%;
+}
+#nota-informativa{
+  width: 100%;
+  padding: 25px 15px 25px 15px;
+  border-radius: 5px;
+  background-color: #d2fafb;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color:#105e62;
+}
+#bienvenida{
+  font-size: 1.7em;
+  color:  #b5525c;
+  font-family: 'Inria Serif';
+  padding-top: 20px;
+}
+#informacion{
+  padding-top: 12px;
+  font-size: 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #105e62;
+  padding-bottom: 18px;
+}
+.estilos-mini-c{
+  border:solid 3px #b5525c;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.titulo-acceso{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #105e62;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#indicador-pagina{
+  font-family: 'Inria Serif';
+  color: #105e62;
+  font-size: 1.7em;
+  margin-right: 10px;
+
+}
+.posicion-icono{
+  float: left;
+  font-size: 35px;
+  margin-right: 10px;
+  color: #105e62;
+}
+.explicacion-funcionalidad{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.anchor-admin{
+  color: #b5525c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.anchor-admin:hover{
+  color: #b5525c;
+}
+#contenedor-img-recursos{
+  text-align: center;
+}
+#img-elegant{
+  border-radius: 10px;
+}
+
+#titulo-plantilla{
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Inria Serif';
+  font-size: 16px;
+  color: #b5525c;
+}
+#contenedor-img-plantilla{
+  text-align: center;
+}
+#contenedor-botones-p{
+  padding-top: 5px;
+  text-align: center;
+}
+.botones-p{
+  border-radius: 5px;
+  background-color: transparent;
+  border-color: #b5525c;
+  width: 80px;
+  margin-left: 5px;
+}
+.botones-p:hover{
+  background-color: #b5525c;
+  color: white;
+}
+.contenedores-multimedia-recursos{
+  margin-top: 10px;
+  background-color: #d2fafb;
+  border-radius: 10px;
+  padding: 10px;
+}
+.diana{
+  border:solid 3px #b5525c;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#inicio-cabecera{
+  padding-left: 30px;
+  padding-top: 30px;
+}
+    </style>
+</head>
+<body style="margin: 0px;">
+    <!--Inicio del dashboard-->
+    <div id="contenedor-dashboard">
+        <div class="opcion-dashboard">
+            <a href=""><i class="fas fa-home icono-dashboard"></i></a>
+            <div class="nombre-opcion">Home</div>
+        </div>
+        <div class="opcion-dashboard">
+            <a href=""><i class="fas fa-users icono-dashboard"></i></a>
+            <div class="nombre-opcion">Usuarios</div>
+        </div>
+        <div class="opcion-dashboard">
+            <a href=""><i class="fas fa-file-alt icono-dashboard"></i></a>
+            <div class="nombre-opcion">Páginas</div>
+        </div>
+        <div class="opcion-dashboard">
+            <a href=""><i class="fas fa-mail-bulk icono-dashboard"></i></a>
+            <div class="nombre-opcion">Entradas</div>
+        </div>
+        <div class="opcion-dashboard">
+            <a href=""><i class="fas fa-photo-video icono-dashboard"></i></a>
+            <div class="nombre-opcion">Apariencia</div>
+        </div>
+        <div class="opcion-dashboard">
+            <a href=""><i class="fas fa-palette icono-dashboard"></i></a>
+            <div class="nombre-opcion">Mis recursos</div>
+        </div>
+        <div class="opcion-dashboard" style="margin-top: 20px;"><a href=""><i class="fas fa-sign-out-alt icono-dashboard" style="color: black;"></i></a></div>
+    </div>
+    <!--Fin del dashboard-->
+
+    <!--Inicio del componente inicio-->
+    <div id="contenedor-administracion-inicio">
+        <div id="nota-informativa">
+          Te encuentras dentro de la administración de tu sitio web, puedes desde aquí tener acceso a las funcionalidades más importantes que Liebe ofrece.
+        </div>
+        <div id="inicio-cabecera">
+          <div><i class="fas fa-home posicion-icono"></i></div>
+        <div id="indicador-pagina">Inicio</div>
+        <div id="bienvenida">¡Bienvenido a la administración de <span style="color: black;">nombre de la plataforma</span>!</div>
+        <div id="informacion">Disfruta de todas las funciones que Liebe pone a tu disposición para la creación de tu sitio web.</div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm diana">
+              <div class="titulo-acceso">Crea todos los usuarios que deseas</div>
+              <div class="explicacion-funcionalidad">
+                Con esta funcionalidad puedes visualizar, añadir, eliminar, editar usuarios.
+              </div>
+              <div>
+                <a href="" class="anchor-admin">Ver todos los usuario</a>
+              </div>
+            </div>
+            <div class=" col-sm diana">
+              <div class="titulo-acceso">Añade páginas a tu sitio</div>
+              <div class="explicacion-funcionalidad">
+                Crea aquí todas las páginas que necesites, Liebe te crea por defecto tu página principal.
+              </div>
+              <div>
+                <a href="" class="anchor-admin">Ir a página principal</a>
+              </div>
+            </div>
+            <div class="col-sm diana">
+              <div class="titulo-acceso">Administra los comentarios</div>
+              <div class="explicacion-funcionalidad">
+                Es importante saber la opinión de otros usuarios sobre las publicaciones que realizas, Liebe te permite tener un control total sobre todos estos comentarios.
+              </div>
+              <div>
+                <a href="" class="anchor-admin">Eliminar comentario</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="contenedores-multimedia-recursos">
+                <div class="titulo-acceso">Selecciona la plantilla que mejor se acopla al contenido de tu sitio</div>
+              <div class="explicacion-funcionalidad">
+                Liebe te proporciona una infinidad de temas que puedes incluir en tu sitio para hacerlo mucho más atractivo.
+              </div>
+              <div id="plantilla">
+                <div id="titulo-plantilla">Elegant</div>
+                <div id="contenedor-img-plantilla">
+                  <img id="img-elegant" src="../../../assets/img/img-plantilla1.jpg">
+                </div>
+                <div id="contenedor-botones-p">
+                  <button class="botones-p">Activar</button>
+                  <button class="botones-p">Editar</button>
+                </div>
+              </div>
+              <div id="anchor-plantillas">
+                <a href="" class="anchor-admin">Ver plantillas</a>
+              </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="contenedores-multimedia-recursos">
+                <div class="titulo-acceso">Añade recursos multimedia a tu sitio</div>
+              <div class="explicacion-funcionalidad">
+                Carga imágenes, vídeos, documentos, entre otros.
+              </div>
+              <div style="text-align: center;">
+                <img src="../../../assets/img/recursos.png" alt="">
+              </div>
+              <div id="anchor-plantillas">
+                <a href="" class="anchor-admin">Añadir recursos</a>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+      </div>
+      </div>
+      
+    
+    
+    
+    
+    
+    
+    <script src="https://kit.fontawesome.com/bd58c78430.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

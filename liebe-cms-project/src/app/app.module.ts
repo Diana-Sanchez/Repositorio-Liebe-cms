@@ -24,6 +24,7 @@ import { RecursosComponent } from './Administracion/recursos/recursos.component'
 import { EntradasComponent } from './Administracion/entradas/entradas.component';
 import { NuevaEntradaComponent } from './Administracion/nueva-entrada/nueva-entrada.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { DashboardComponent } from './Administracion/dashboard/dashboard.component';
 
 
 
@@ -50,6 +51,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
     EntradasComponent,
     NuevaEntradaComponent,
     RegistroUsuarioComponent,
+    DashboardComponent,
    
     
   ],
