@@ -8,7 +8,7 @@
 
     <style>
         #contenedor-dashboard{
-            width: 7%;
+            width: 8%;
             height: 100vh;
             background-color: #105e62;
             float: left;
@@ -26,9 +26,6 @@
         .opcion-dashboard:hover{
             background-color: #b5525c;
         }
-        .opcion-dashboar:active{
-            background-color: yellowgreen;
-        }
         .nombre-opcion{
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,14 +33,47 @@
             padding-bottom: 3px;
             padding-top: 3px;
         }
+        @media only screen and (max-width: 750px) {
+            #contenedor-dashboard{
+              width: 100%;
+              height: auto;
+              z-index: 1;
+              float: left !important;
+              padding-left: 2%;
+              padding-right: 2%;
+            }
+            .opcion-dashboard{
+              float: left;
+              padding-left:1%;
+              padding-right: 1%;
+            }
+            #cerrar-sesion{
+              float: right;
+            }
+            .icono-dashboard{
+              font-size: 18px;
+            }
+        }
         /* Estilos del componente de Inicio*/
         #contenedor-administracion-inicio{
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 70px;
             float: right;
-            width: 93%;
+            width: 92%;
+        }
+        @media only screen and (max-width: 750px) {
+            #contenedor-administracion-inicio{
+              margin-top: 16%;
+              float: left !important; 
+              width: 100% !important;
             }
+        }
+        @media (min-width: 500px) and (max-width: 750px){
+          #contenedor-administracion-inicio{
+            margin-top: 11% !important;
+          }
+        }
         #nota-informativa{
           width: 100%;
           padding: 25px 15px 25px 15px;
@@ -68,99 +98,97 @@
           color: #105e62;
           padding-bottom: 30px;
         }
-.estilos-mini-c{
-  border:solid 3px #b5525c;
-  border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-.titulo-acceso{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #105e62;
-  padding-bottom: 10px;
-}
-#indicador-pagina{
-  font-family: 'Inria Serif';
-  color: #105e62;
-  font-size: 2em;
-  margin-right: 10px;
+        .estilos-mini-c{
+          border:solid 3px #b5525c;
+          border-radius: 5px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 10px;
+        }
+        .titulo-acceso{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 22px;
+          font-weight: 600;
+          color: #105e62;
+          padding-bottom: 10px;
+        }        
+        #indicador-pagina{
+          font-family: 'Inria Serif';
+          color: #105e62;
+          font-size: 2em;
+          margin-right: 10px;
+        }
+        .posicion-icono{
+          float: left;
+          font-size: 40px;
+          margin-right: 10px;
+          color: #105e62;
+        }
+        .explicacion-funcionalidad{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 18px;
+          padding-bottom: 10px;
+        }
+        .anchor-admin{
+          font-size: 18px;
+          color: #b5525c;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .anchor-admin:hover{
+          color: #b5525c;
+        }
+        #contenedor-img-recursos{
+          text-align: center;
+        }
+        #img-elegant{
+          border-radius: 10px;
+        }
 
-}
-.posicion-icono{
-  float: left;
-  font-size: 40px;
-  margin-right: 10px;
-  color: #105e62;
-}
-.explicacion-funcionalidad{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  padding-bottom: 10px;
-}
-.anchor-admin{
-  font-size: 18px;
-  color: #b5525c;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.anchor-admin:hover{
-  color: #b5525c;
-}
-#contenedor-img-recursos{
-  text-align: center;
-}
-#img-elegant{
-  border-radius: 10px;
-}
-
-#titulo-plantilla{
-  text-align: center;
-  font-weight: 600;
-  font-family: 'Inria Serif';
-  font-size: 16px;
-  color: #b5525c;
-}
-#contenedor-img-plantilla{
-  text-align: center;
-}
-#contenedor-botones-p{
-  padding-top: 5px;
-  text-align: center;
-}
-.botones-p{
-  border-radius: 5px;
-  background-color: transparent;
-  border-color: #b5525c;
-  width: 80px;
-  margin-left: 5px;
-}
-.botones-p:hover{
-  background-color: #b5525c;
-  color: white;
-}
-.contenedores-multimedia-recursos{
-  
-  margin-top: 10px;
-  background-color: #d2fafb;
-  border-radius: 10px;
-  padding: 5% 3% 5% 3%;
-}
-.diana{
-  padding: 3% 2% 3% 2%;
-  border-radius: 5px;
-  border:solid 3px #105e62;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 25px;
-}
-#inicio-cabecera{
-  padding-left: 30px;
-  padding-top: 30px;
-}
+        #titulo-plantilla{
+          text-align: center;
+          font-weight: 600;
+          font-family: 'Inria Serif';
+          font-size: 16px;
+          color: #b5525c;
+        }
+        #contenedor-img-plantilla{
+          text-align: center;
+        }
+        #contenedor-botones-p{
+          padding-top: 5px;
+          text-align: center
+        }
+        .botones-p{
+          border-radius: 5px;
+          background-color: transparent;
+          border-color: #b5525c;
+          width: 80px;
+          margin-left: 5px;
+        }
+        .botones-p:hover{
+          background-color: #b5525c;
+          color: white;
+        }        
+        .contenedores-multimedia-recursos{
+          margin-top: 10px;
+          background-color: #d2fafb;
+          border-radius: 10px;
+          padding: 5% 3% 5% 3%;
+        }
+        .diana{
+          padding: 3% 2% 3% 2%;
+          border-radius: 5px;
+          border:solid 3px #105e62;
+          margin-right: 10px;
+          margin-left: 10px;
+          margin-bottom: 25px;
+        }
+        #inicio-cabecera{
+          padding-left: 30px;
+          padding-top: 30px;
+        }
     </style>
 </head>
 <body style="margin: 0px;">
@@ -190,7 +218,10 @@
             <a href=""><i class="fas fa-palette icono-dashboard"></i></a>
             <div class="nombre-opcion">Mis recursos</div>
         </div>
-        <div class="opcion-dashboard" style="margin-top: 20px;"><a href=""><i class="fas fa-sign-out-alt icono-dashboard" style="color: black;"></i></a></div>
+        <div class="opcion-dashboard" id="cerrar-sesion">
+          <a href=""><i class="fas fa-sign-out-alt icono-dashboard" style="color: black;"></i></a>
+          <div class="nombre-opcion">Cerrar sesión</div>
+        </div>
     </div>
     <!--Fin del dashboard-->
 
@@ -238,28 +269,21 @@
         </div>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="contenedores-multimedia-recursos">
                 <div class="titulo-acceso">Selecciona la plantilla que mejor se acopla al contenido de tu sitio</div>
               <div class="explicacion-funcionalidad">
                 Liebe te proporciona una infinidad de temas que puedes incluir en tu sitio para hacerlo mucho más atractivo.
               </div>
               <div id="plantilla">
-                <div id="titulo-plantilla">Elegant</div>
-                <div id="contenedor-img-plantilla">
-                  <img id="img-elegant" src="../../../assets/img/img-plantilla1.jpg">
-                </div>
-                <div id="contenedor-botones-p">
-                  <button class="botones-p">Activar</button>
-                  <button class="botones-p">Editar</button>
-                </div>
+                
               </div>
               <div id="anchor-plantillas">
                 <a href="" class="anchor-admin">Ver plantillas</a>
               </div>
               </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="contenedores-multimedia-recursos">
                 <div class="titulo-acceso">Añade recursos multimedia a tu sitio</div>
               <div class="explicacion-funcionalidad">
