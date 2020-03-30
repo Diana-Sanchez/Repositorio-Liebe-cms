@@ -81,6 +81,9 @@
           color: white;
         }  
         /* Fin de los estilos del footer administrador */
+
+        /* Inicio de los estilos de usuarios*/
+        
         #contenedor-paginas{
           width: 92%;
           padding: 30px 50px 50px 30px;
@@ -109,7 +112,7 @@
         }
         #explicacion-area{
           padding-top: 12px;
-          font-size: 1.2em;
+          font-size:18px;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           color: #105e62;
           padding-bottom: 18px;
@@ -123,6 +126,7 @@
           padding-bottom: 10px;
         }
         .btn-nueva-pagina{
+          font-size: 18px;
           padding: 10px 20px 10px 10px;
           background-color: #105e62;
           border-radius: 5px;
@@ -149,7 +153,7 @@
           background-color: #d2fafb;
           margin-bottom: 20px;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          font-size: 20px;
+          font-size: 18px;
           color:#105e62
         }
         .table{
@@ -160,7 +164,67 @@
           background-color: #b5525c !important;
           border-color: #b5525c !important;
         }
-        /* Inicio de los estilos de usuarios*/
+
+        /* Fin de los estilos de usuarios*/
+
+        /* Estilos para añadir un nuevo usuario*/
+        #contenedor-principal-usuarios{
+            width: 100%;
+            padding: 30px 20px 50px 20px;
+          }
+          .posicion-icono{
+            float: left;
+            margin-right: 10px;
+            font-size: 35px;
+            color: #105e62;
+          }
+          #explicacion-area{
+            padding-top: 12px;
+            font-size: 1.2em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #b5525c;
+            padding-bottom: 18px;
+            padding-bottom: 30px;
+          }
+          #indicador-pagina{
+            font-family: 'Inria Serif';
+            color: #105e62;
+            font-size: 1.7em;
+            margin-right: 10px;
+            padding-bottom: 10px;
+          }
+          .btn-nuevo-usuario{
+            padding: 10px 20px 10px 10px;
+            background-color: #b5525c;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+          }
+          .btn-nuevo-usuario:hover{
+            background-color: #c43544;
+          }
+          #contenedor-nuevo-usuario{
+            float: right;
+          }
+          .lbl-registro-proyecto{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            color: #105e62;
+          }
+          .input-registro{
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px 4px 6px 4px;
+          }
+          #contenedor-btn-registro{
+            margin-top: 15px;
+          }
+          .modal-content{
+            background-color: #d2fafb !important;
+          }
+
+          /* Fin de estilos de nuevo usuario*/
+        
     </style>
 </head>
 <body style="margin: 0px;">
@@ -206,13 +270,15 @@
         <div><i class="fas fa-users posicion-icono"></i></div>
         <div id="indicador-pagina">Usuarios</div>
         <div id="contenedor-nueva-pagina">
-          <button class="btn-nueva-pagina" routerLink="/admin/nuevo-usuario">Añadir usuario</button>
+          <button type="button" class="btn-nueva-pagina" data-toggle="modal" data-target="#modal-nuevo-usuario">
+            Añadir nuevo usuario
+          </button>
         </div>
+        
         <div id="explicacion-area">Personas registradas en tu plataforma.</div>
         <table class="table">
           <thead class="thead-dark">
             <tr>
-              <th scope="col">#</th>
               <th scope="col">Nombre</th>
               <th scope="col">Usuario</th>
               <th scope="col">Tipo</th>
@@ -221,49 +287,42 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
               <td><b>Diana Sánchez</b><br><a class="acciones-paginas" href="" routerLink = "/admin/edicion-usuario">editar</a></td>
               <td>diana-s</td>
               <td>admin</td>
               <td>yolibeth@gmail.com</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
               <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
               <td>montse-s</td>
               <td>user-n</td>
               <td>montse.com</td>
             </tr>
             <tr>
-              <th scope="row">3</th>
               <td>Bessy Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
               <td>bessy-s</td>
               <td>user-n</td>
               <td>bessy.com</td>
             </tr>
             <tr>
-              <th scope="row">4</th>
               <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
               <td>montse-s</td>
               <td>user-n</td>
               <td>montse.com</td>
             </tr>
             <tr>
-              <th scope="row">5</th>
               <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
               <td>montse-s</td>
               <td>user-n</td>
               <td>montse.com</td>
             </tr>
             <tr>
-              <th scope="row">6</th>
               <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
               <td>montse-s</td>
               <td>user-n</td>
               <td>montse.com</td>
             </tr>
             <tr>
-              <th scope="row">7</th>
               <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
               <td>montse-s</td>
               <td>user-n</td>
@@ -273,6 +332,49 @@
         </table>
       </div>
     </div>
+
+    <!-- Ventana modal para añadir un nuevo usuario-->
+    
+    <div class="modal fade" id="modal-nuevo-usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"     aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle">
+              Registro de nuevo usuario
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="contenedor-principal-usuarios">
+              <div id="usuarios-cabecera">
+                <div><i class="fas fa-users posicion-icono"></i></div>
+                <div id="indicador-pagina">Usuarios</div>
+                <div id="explicacion-area">Añade usuarios a tu sitio.</div>
+              </div>
+              <form action="" id="formulario-registro">
+                  <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label><br>
+                  <input type="text" id="txt-correo" class="input-registro" autofocus><br>
+                  <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
+                  <input type="text" id="txt-nombre-usuario" class="input-registro"><br>
+                  <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
+                  <input type="text" id="txt-contrasena" class="input-registro"><br>
+                  <label for="" class="lbl-registro-proyecto">Confirmar contraseña</label><br>
+                  <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
+                  <label for="" class="lbl-registro-proyecto">Tipo usuario admin/user-n</label><br>
+                  <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-nuevo-usuario">Guardar nuevo usuario</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin de la ventana modal para añadir un nuevo usuario-->
+
     <!-- Fin del componente usuarios/administración de Liebe-->
     
     <!-- Inicio del footer-->
@@ -283,7 +385,6 @@
     </div>
 
     <!--Fin del footer administrativo-->
-    
     
     
     

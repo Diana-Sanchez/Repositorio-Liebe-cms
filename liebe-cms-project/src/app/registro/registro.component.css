@@ -46,3 +46,15 @@
     float: right;
     font-weight: 500;
   }
+  .error{
+    color: red;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+  }
+  .input-error{
+    border-color: red;
+  }
+  .input-success{
+    border-color: #28a745;
+  }

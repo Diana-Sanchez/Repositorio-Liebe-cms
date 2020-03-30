@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,7 @@ import { EntradasComponent } from './Administracion/entradas/entradas.component'
 import { NuevaEntradaComponent } from './Administracion/nueva-entrada/nueva-entrada.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { DashboardComponent } from './Administracion/dashboard/dashboard.component';
+import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 
 
 
@@ -52,12 +53,14 @@ import { DashboardComponent } from './Administracion/dashboard/dashboard.compone
     NuevaEntradaComponent,
     RegistroUsuarioComponent,
     DashboardComponent,
+    AccesoAdministradorComponent,
    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
     
     
     

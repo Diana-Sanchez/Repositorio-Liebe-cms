@@ -14,6 +14,7 @@ import { RecursosComponent } from './Administracion/recursos/recursos.component'
 import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
 import { EntradasComponent } from './Administracion/entradas/entradas.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 
 
 
@@ -22,13 +23,13 @@ const routes: Routes = [
   {
     path: 'liebe',
     component: HomePrincipalComponent,
-    children: [
+    children:[
       {
-        path:'',
+        path: '',
         component: BodyLandingComponent
       },
       {
-        path: 'admin',
+        path: 'acceso',
         component: AccesoComponent
       },
       {
@@ -47,12 +48,18 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    component: HomePrincipalComponent,
+    children: [
+      {
+        path: '',
+        component: AccesoAdministradorComponent, 
+      }
+    ]
+  },
+  {
+    path: 'admin',
     component: AdminPrincipalComponent,
     children:[
-      {
-        path: 'home',
-        component: InicioComponent
-      },
       {
         path: 'usuarios',
         component: UsuariosComponent

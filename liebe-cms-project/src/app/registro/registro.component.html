@@ -2,24 +2,29 @@
     <div class="container" id="contenedor-fila-registro">
       <div class="row">
         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-          <label for="" class="lbl-registro-proyecto">Dale un nombre a tu proyecto</label><br>
-            <input type="text" id="txt-nombre-proyecto" class="input-registro" autofocus><br>
-            <label for="" class="lbl-registro-proyecto">Ingresa una breve descripción</label><br>
-            <textarea name="" id="text-descripcion" cols="30" rows="3" class="input-registro"></textarea>
+          
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-          <form action="" id="formulario-registro">
+          <form [formGroup] = "registrosUsuarios" id="formulario-registro">
             <h3>Registrate en Liebe</h3><br>
+            <label for="" class="lbl-registro-proyecto">Dale un nombre a tu proyecto</label><br>
+            <input formControlName= "nombreProyecto" type="text" id="txt-nombre-proyecto" [ngClass] = "{'input-error':nombreProyecto.invalid && (nombreProyecto.dirty || nombreProyecto.touched), 'input-success':nombreProyecto.valid}" class="input-registro" autofocus><br>
+            <div *ngIf= "nombreProyecto.invalid && (nombreProyecto.dirty || nombreProyecto.touched)"class="error" >
+              <span *ngIf = "nombreProyecto.errors.required">El campo está vacío</span>
+              <span *ngIf = "nombreProyecto.errors.maxlength">El nombre que ingresaste excede la cantidad de caracteres permitidos</span>
+            </div>
+            <label for="" class="lbl-registro-proyecto">Ingresa una breve descripción</label><br>
+            <textarea formControlName = "descripcionProyecto" name="" id="text-descripcion" cols="30" rows="3" class="input-registro"></textarea>
             <label for="" id="modo-registro">Administrator mode</label><br>
             <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label><br>
-            <input type="text" id="txt-correo" class="input-registro"><br>
+            <input formControlName ="correo" type="email" id="txt-correo" class="input-registro"><br>
             <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
-            <input type="text" id="txt-nombre-usuario" class="input-registro"><br>
+            <input formControlName ="nombreUsuario" type="text" id="txt-nombre-usuario" class="input-registro"><br>
             <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
-            <input type="text" id="txt-contrasena" class="input-registro"><br>
+            <input formControlName ="password" type="password" id="txt-contrasena" class="input-registro"><br>
             <label for="" class="lbl-registro-proyecto">Confirmar contraseña</label><br>
-            <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
-            <div id="contenedor-btn-registro"><button id="btn-registro">Registrarme</button></div>
+            <input formControlName ="confirmarPassword" type="password" id="txt-confirmacion-contrasena" class="input-registro"><br>
+            <div id="contenedor-btn-registro"><button [disabled]="!registrosUsuarios.valid" id="btn-registro" (click)= "guardarRegistroUsuario()">Registrarme</button></div>
           </form>
         </div>
       </div>
