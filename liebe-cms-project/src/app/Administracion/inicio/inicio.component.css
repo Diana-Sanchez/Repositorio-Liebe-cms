@@ -19,117 +19,122 @@
 }
 }
 #nota-informativa{
-width: 100%;
-padding: 25px 15px 25px 15px;
-border-radius: 5px;
-background-color: #d2fafb;
-margin-top: 20px;
-margin-bottom: 20px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 20px;
-color:#105e62;
+  width: 100%;
+  padding: 25px 15px 25px 15px;
+  border-radius: 5px;
+  background-color: #d2fafb;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color:#105e62;
 }
 #bienvenida{
-font-size: 1.7em;
-color:  #b5525c;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-padding-top: 25px;
+  font-size: 1.7em;
+  color:  #b5525c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 25px;
 }
 #informacion{
-padding-top: 15px;
-font-size: 20px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-color: #105e62;
-padding-bottom: 30px;
+  padding-top: 15px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #105e62;
+  padding-bottom: 30px;
 }
 .estilos-mini-c{
-border:solid 3px #b5525c;
-border-radius: 5px;
-padding-top: 10px;
-padding-bottom: 10px;
-margin-left: 20px;
-margin-right: 20px;
-margin-bottom: 10px;
+  border:solid 3px #b5525c;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 .titulo-acceso{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 22px;
-font-weight: 600;
-color: #105e62;
-padding-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #105e62;
+  padding-bottom: 10px;
 }        
 #indicador-pagina{
-font-family: 'Inria Serif';
-color: #105e62;
-font-size: 2em;
-margin-right: 10px;
+  font-family: 'Inria Serif';
+  color: #105e62;
+  font-size: 2em;
+  margin-right: 10px;
 }
 .posicion-icono{
-float: left;
-font-size: 40px;
-margin-right: 10px;
-color: #105e62;
+  float: left;
+  font-size: 40px;
+  margin-right: 10px;
+  color: #105e62;
 }
 .explicacion-funcionalidad{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 18px;
-padding-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 .anchor-admin{
-font-size: 18px;
-color: #b5525c;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: #b5525c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .anchor-admin:hover{
-color: #b5525c;
+  color: #b5525c;
 }
 #contenedor-img-recursos{
-text-align: center;
+  text-align: center;
 }
 #img-elegant{
-border-radius: 10px;
+  border-radius: 10px;
 }
 
 #titulo-plantilla{
-text-align: center;
-font-weight: 600;
-font-family: 'Inria Serif';
-font-size: 16px;
-color: #b5525c;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Inria Serif';
+  font-size: 16px;
+  color: #b5525c;
 }
 #contenedor-img-plantilla{
-text-align: center;
+  text-align: center;
 }
 #contenedor-botones-p{
-padding-top: 5px;
-text-align: center
+  padding-top: 5px;
+  text-align: center
 }
 .botones-p{
-border-radius: 5px;
-background-color: transparent;
-border-color: #b5525c;
-width: 80px;
-margin-left: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  border-color: #b5525c;
+  width: 80px;
+  margin-left: 5px;
 }
 .botones-p:hover{
-background-color: #b5525c;
-color: white;
+  background-color: #b5525c;
+  color: white;
 }        
 .contenedores-multimedia-recursos{
-margin-top: 10px;
-background-color: #d2fafb;
-border-radius: 10px;
-padding: 5% 3% 5% 3%;
+  margin-top: 10px;
+  background-color: #d2fafb;
+  border-radius: 10px;
+  padding: 5% 3% 5% 3%;
 }
 .diana{
-padding: 3% 2% 3% 2%;
-border-radius: 5px;
-border:solid 3px #105e62;
-margin-right: 10px;
-margin-left: 10px;
-margin-bottom: 25px;
+  padding: 3% 2% 3% 2%;
+  border-radius: 5px;
+  border:solid 3px #105e62;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 25px;
 }
 #inicio-cabecera{
-padding-left: 30px;
-padding-top: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.dimension-recurso{
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
 }
