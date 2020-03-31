@@ -2,22 +2,37 @@
     <form [formGroup] = "registrosUsuarios" id="formulario-registro">
         <label for="" id="modo-registro"><b>Registro administrativo</b></label><br>
         <h3>Registrate en Liebe</h3><br>
+
         <label for="" class="lbl-registro-proyecto">Dale un nombre a tu proyecto</label><br>
         <input formControlName= "nombreProyecto" type="text" id="txt-nombre-proyecto" [ngClass] = "{'input-error':nombreProyecto.invalid && (nombreProyecto.dirty || nombreProyecto.touched), 'input-success':nombreProyecto.valid}" class="input-registro" autofocus><br>
         <div *ngIf= "nombreProyecto.invalid && (nombreProyecto.dirty || nombreProyecto.touched)"class="error" >
           <span *ngIf = "nombreProyecto.errors.required">El campo está vacío</span>
           <span *ngIf = "nombreProyecto.errors.maxlength">El nombre ingresado excede la cantidad de caracteres permitidos</span>
         </div>
+
         <label for="" class="lbl-registro-proyecto">Ingresa una breve descripción</label><br>
-        <textarea formControlName = "descripcionProyecto" name="" id="text-descripcion" cols="30" rows="3" class="input-registro"></textarea>
+        <textarea formControlName= "descripcionProyecto" type="text" id="txt-nombre-proyecto" [ngClass] = "{'input-error':descripcionProyecto.invalid && (descripcionProyecto.dirty || descripcionProyecto.touched), 'input-success':descripcionProyecto.valid}" class="input-registro"></textarea><br>
+        <div *ngIf= "descripcionProyecto.invalid && (descripcionProyecto.dirty || descripcionProyecto.touched)"class="error" >
+          <span *ngIf = "descripcionProyecto.errors.required">El campo está vacío</span>
+          <span *ngIf = "descripcionProyecto.errors.maxlength">La descripción ingresada excede la cantidad de caracteres permitidos</span>
+        </div>
+        
         <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label><br>
         <input formControlName ="correo" type="email" id="txt-correo" class="input-registro"><br>
+        <div class="error">
+
+        </div>
+
         <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
         <input formControlName ="nombreUsuario" type="text" id="txt-nombre-usuario" class="input-registro"><br>
+
         <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
         <input formControlName ="password" type="password" id="txt-contrasena" class="input-registro"><br>
+
         <label for="" class="lbl-registro-proyecto">Confirmar contraseña</label><br>
         <input formControlName ="confirmarPassword" type="password" id="txt-confirmacion-contrasena" class="input-registro"><br>
+
+
         <div id="contenedor-btn-registro"><button [disabled]="!registrosUsuarios.valid" id="btn-registro" (click)= "guardarRegistroUsuario()">Registrarme</button></div>
       </form>
 </div>

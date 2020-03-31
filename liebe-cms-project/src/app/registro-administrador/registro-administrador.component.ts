@@ -23,7 +23,11 @@ export class RegistroAdministradorComponent implements OnInit {
   }
   get nombreProyecto(){
     return this.registrosUsuarios.get('nombreProyecto');
-  }
+  };
+
+  get descripcionProyecto(){
+    return this.registrosUsuarios.get('descripcionProyecto');
+  };
   guardarRegistroUsuario(){
     console.log(this.registrosUsuarios.value);
     console.log('Fomulario válido:', this.registrosUsuarios.valid )
