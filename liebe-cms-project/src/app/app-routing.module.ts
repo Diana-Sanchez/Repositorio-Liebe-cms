@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AccesoComponent } from './acceso/acceso.component';
 import { BodyLandingComponent } from './body-landing/body-landing.component';
-import { RegistroComponent } from './registro/registro.component';
 import { AdminPrincipalComponent } from './Administracion/admin-principal/admin-principal.component';
 import { InicioComponent } from './Administracion/inicio/inicio.component';
 import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
@@ -15,6 +14,7 @@ import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina
 import { EntradasComponent } from './Administracion/entradas/entradas.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
+import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
 
 
 
@@ -32,10 +32,7 @@ const routes: Routes = [
         path: 'acceso',
         component: AccesoComponent
       },
-      {
-        path: 'registro-admin',
-        component: RegistroComponent
-      },
+  
       {
         path: 'inicio',
         component: BodyLandingComponent
@@ -43,6 +40,10 @@ const routes: Routes = [
       {
         path: 'registro-usuario',
         component: RegistroUsuarioComponent
+      },
+      {
+        path: 'registro-admin',
+        component: RegistroAdministradorComponent
       }
     ]
   },

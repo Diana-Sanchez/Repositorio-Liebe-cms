@@ -8,6 +8,9 @@
     border-radius: 5px;
   }
 #contenedor-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #c6f0eb;
     display: flex;
     justify-content: center;
@@ -41,20 +44,23 @@
     padding: 20px 15px 20px 15px;
   }
 #modo-registro{
-    color: #b5525c;
-    font-size: 16px;
+    color: #105e62;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float: right;
-    font-weight: 500;
   }
-  .error{
+.error{
     color: red;
     font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: right;
-  }
-  .input-error{
+}
+.input-error{
     border-color: red;
-  }
-  .input-success{
-    border-color: #28a745;
-  }
+}
+.input-success{
+   border-color: #28a745;
+}
+#formulario-registro{
+   background-color: white;
+   padding:20px;
+}

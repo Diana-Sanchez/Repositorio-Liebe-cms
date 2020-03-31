@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.css']
+  selector: 'app-registro-administrador',
+  templateUrl: './registro-administrador.component.html',
+  styleUrls: ['./registro-administrador.component.css']
 })
-export class RegistroComponent implements OnInit {
+export class RegistroAdministradorComponent implements OnInit {
   // Creando instancia del tipo FormGroup
   registrosUsuarios = new FormGroup({
     nombreProyecto:new FormControl('', [Validators.required, Validators.maxLength(15)]),
@@ -16,6 +16,7 @@ export class RegistroComponent implements OnInit {
     password:new FormControl('', [Validators.required]),
     confirmarPassword:new FormControl('', [Validators.required])
   });
+
   constructor() { }
 
   ngOnInit(): void {

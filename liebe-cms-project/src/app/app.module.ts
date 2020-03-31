@@ -9,7 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BodyLandingComponent } from './body-landing/body-landing.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { AccesoComponent } from './acceso/acceso.component';
-import { RegistroComponent } from './registro/registro.component';
 import { AdminPrincipalComponent } from './Administracion/admin-principal/admin-principal.component';
 import { PanelComponent } from './Administracion/panel/panel.component';
 import { InicioComponent } from './Administracion/inicio/inicio.component';
@@ -26,6 +25,7 @@ import { NuevaEntradaComponent } from './Administracion/nueva-entrada/nueva-entr
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { DashboardComponent } from './Administracion/dashboard/dashboard.component';
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
+import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
 
 
 
@@ -37,7 +37,6 @@ import { AccesoAdministradorComponent } from './Administracion/acceso-administra
     BodyLandingComponent,
     PiePaginaComponent,
     AccesoComponent,
-    RegistroComponent,
     AdminPrincipalComponent,
     PanelComponent,
     InicioComponent,
@@ -54,6 +53,7 @@ import { AccesoAdministradorComponent } from './Administracion/acceso-administra
     RegistroUsuarioComponent,
     DashboardComponent,
     AccesoAdministradorComponent,
+    RegistroAdministradorComponent,
    
     
   ],
