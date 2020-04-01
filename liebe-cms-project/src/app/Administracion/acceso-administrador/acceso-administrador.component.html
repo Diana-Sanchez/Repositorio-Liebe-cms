@@ -1,14 +1,27 @@
 <div id="contenedor-login">
-    <div id="formulario-login">
-    <label for="" id="lbl-modo-acceso"><b>Acceso administrativo</b></label><br>
+    <form [formGroup]= "accesoUsuarioAdmin" id="formulario-login">
+      <label for="" id="lbl-modo-acceso"><b>Acceso administrativo</b></label><br>
       <label id="titulo-acceso">
         <h3>Accede a tu cuenta</h3>
       </label><br>
-      <label class="estilos-label-login">Dirección de correo electrónico o nombre de usuario</label><br>
-      <input type="text" id="txt-direccion-usuario" class="input-login" autofocus><br>
+      <label class="estilos-label-login">Nombre de usuario</label><br>
+      <input formControlName ="nombreDeAdmin" [ngClass] = "{'input-error': nombreDeAdmin.invalid && (nombreDeAdmin.dirty || nombreDeAdmin.touched), 'input-success': nombreDeAdmin.valid}" type="text" id="txt-direccion-usuario" class="input-login"><br>
+      <div *ngIf = "nombreDeAdmin.invalid && (nombreDeAdmin.dirty || nombreDeAdmin.touched)" class="error">
+        <span *ngIf = "nombreDeAdmin.errors.maxlength">El nombre de usuario no es válido</span>
+        <span *ngIf = "nombreDeAdmin.errors.required">El campo está vacío</span>
+      </div>
+
       <label class="estilos-label-login">Contraseña</label><br>
-      <input type="password" class="input-login"><br>
-      <div id="contenedor-forgot-pass"><a id="anchor-password" href="#">¿Has olvidado tu contraseña?</a></div>
-      <div id="contenedor-btn-login"><button id="btn-login" routerLink = "/admin/home">Acceder</button></div>
-    </div>
+      <input formControlName ="passwordDeAdmin" [ngClass] = "{'input-error': passwordDeAdmin.invalid && (passwordDeAdmin.dirty || passwordDeAdmin.touched), 'input-success': passwordDeAdmin.valid}" type="password" class="input-login"><br>
+      <div *ngIf = "passwordDeAdmin.invalid && (passwordDeAdmin.dirty || passwordDeAdmin.touched)" class="error">
+        <span *ngIf = "passwordDeAdmin.errors.minlength">Contraseña ingresada incorrecta</span>
+        <span *ngIf = "passwordDeAdmin.errors.maxlength">Contraseña ingresada incorrecta</span>
+        <span *ngIf = "passwordDeAdmin.errors.required">El campo está vacío</span>
+      </div>
+      <div id="contenedor-forgot-pass"><a id="anchor-password" href="#">¿Has olvidado tu contraseña?</a></div><br>
+      <div id="mensaje-valid" *ngIf="accesoUsuarioAdmin.valid">Datos correctos</div>
+      <div id="contenedor-btn-login">
+        <button [disabled]="!accesoUsuarioAdmin.valid" (click)= "guardarAccesoUsuarioAdmin()" [ngClass]="{'btn-deshabilitado':accesoUsuarioAdmin.invalid, 'btn-login':accesoUsuarioAdmin.valid}" routerLink = "/admin/home">Acceder</button>
+      </div>
+    </form>
   </div>

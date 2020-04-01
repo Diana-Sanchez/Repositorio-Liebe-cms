@@ -20,7 +20,7 @@
     padding-top: 4px;
     padding-bottom: 4px;
   }
-  #btn-login{
+  .btn-login{
     padding: 7px 40px 7px 40px;
     border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,7 +29,7 @@
     color: white;
     width: 100%;
   }
-  #btn-login:hover{
+  .btn-login:hover{
     background-color: #c43544;
   }
   #contenedor-btn-login{
@@ -62,4 +62,41 @@
     color: #105e62;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float: right;
-}
+  }
+/* Estilos exclusivos para las validaciones */
+ .error{
+    color: red;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+  }
+ .input-error{
+    border-color: red;
+  }
+  .input-success{
+    border-color: #28a745;
+  }
+ #formulario-registro{
+    background-color: white;
+    padding:20px;
+    width: 40%;
+ }
+#mensaje-valid{
+    padding: 10px 5px 10px 5px;
+    margin-top: 7px;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+.btn-deshabilitado{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: rgb(138, 136, 136);
+    color: white;
+    width: 100%;
+ }
