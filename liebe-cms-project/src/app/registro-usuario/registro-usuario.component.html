@@ -1,20 +1,28 @@
 <div id="contenedor-registro">
-    <div class="container" id="contenedor-fila-registro">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <div>
-            <h3>Registrate en Liebe</h3><br>
-            <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label><br>
-            <input type="text" id="txt-correo" class="input-registro"><br>
-            <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
-            <input type="text" id="txt-nombre-usuario" class="input-registro"><br>
-            <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
-            <input type="text" id="txt-contrasena" class="input-registro"><br>
-            <label for="" class="lbl-registro-proyecto">Confirmar contraseña</label><br>
-            <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
-            <div id="contenedor-btn-registro"><button id="btn-registro">Registrarme</button></div>
-          </div>
-        </div>
-      </div>
+  <form [formGroup]= "registroUsuarioNormal" id="frm-usuario-normal">
+    <h3>Registrate en Liebe</h3><br>
+    <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label>
+    <input formControlName ="correo" class="input-registro" [ngClass] = "{'input-error': correo.invalid && (correo.dirty || correo.touched), 'input-success': correo.valid}" type="text" id="txt-correo" ><br>
+    <div *ngIf = "correo.invalid && (correo.dirty || correo.touched)" class="error">
+      <span *ngIf = "correo.errors.pattern">El correo ingresado no es válido</span>
+      <span *ngIf = "correo.errors.required">El campo está vacío</span>
     </div>
+    <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
+    <input formControlName ="nombreUsuario" class="input-registro" [ngClass] = "{'input-error': nombreUsuario.invalid && (nombreUsuario.dirty || nombreUsuario.touched), 'input-success': nombreUsuario.valid}" type="text" id="txt-nombre-usuario" ><br>
+    <div *ngIf = "nombreUsuario.invalid && (nombreUsuario.dirty || nombreUsuario.touched)" class="error">
+      <span *ngIf = "nombreUsuario.errors.maxlength">El nombre de usuario ingresado excede la cantidad de caracteres permitidos</span>
+      <span *ngIf = "nombreUsuario.errors.required">El campo está vacío</span>
+    </div>
+    <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
+    <input formControlName ="password" class="input-registro" [ngClass] = "{'input-error': password.invalid && (password.dirty || password.touched), 'input-success': password.valid}" type="text" id="txt-contrasena" ><br>
+    <div *ngIf = "password.invalid && (password.dirty || password.touched)" class="error">
+      <span *ngIf = "password.errors.minlength">La contraseña ingresada es muy corta</span>
+      <span *ngIf = "password.errors.maxlength">La contraseña ingresada excede la cantidad de caracteres permitidos</span>
+      <span *ngIf = "password.errors.required">El campo está vacío</span>
+    </div>
+    <div id="mensaje-valid" *ngIf="registroUsuarioNormal.valid">Datos correctos</div>
+    <div id="contenedor-btn-registro">
+      <button [disabled]="!registroUsuarioNormal.valid" (click)= "guardarUsuarioNormal()" [ngClass]="{'btn-deshabilitado':registroUsuarioNormal.invalid, 'btn-registro':registroUsuarioNormal.valid}">Registrarme</button>
+    </div>
+  </form>  
 </div>
