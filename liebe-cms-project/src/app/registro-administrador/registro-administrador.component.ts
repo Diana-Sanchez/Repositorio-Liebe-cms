@@ -48,7 +48,8 @@ export class RegistroAdministradorComponent implements OnInit {
     
     this.usuarios.push(this.registrosUsuarios.value);
     console.log(this.usuarios);
-    console.log('Fomulario válido:', this.registrosUsuarios.valid )
+    console.log('Fomulario válido:', this.registrosUsuarios.valid );
+    this.registrosUsuarios.reset(); 
   };
 
   

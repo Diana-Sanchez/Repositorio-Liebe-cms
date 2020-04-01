@@ -38,22 +38,7 @@
           <span *ngIf = "password.errors.maxlength">La contraseña ingresada excede la cantidad de caracteres permitidos</span>
           <span *ngIf = "password.errors.required">El campo está vacío</span>
         </div>
-
-        <div id="contenedor-btn-registro"><button [disabled]="!registrosUsuarios.valid" id="btn-registro" (click)= "guardarRegistroUsuario()">Registrarme</button></div>
+        <div id="mensaje-valid" *ngIf="registrosUsuarios.valid">Datos correctos</div>
+        <div id="contenedor-btn-registro"><button [disabled]="!registrosUsuarios.valid" (click)= "guardarRegistroUsuario()" [ngClass]="{'btn-deshabilitado':registrosUsuarios.invalid, 'btn-registro':registrosUsuarios.valid}">Registrarme</button></div>
       </form><br>
-      <table>
-        <thead>
-            <tr>
-                <th>Nombre proyecto</th>
-                <th>descripcion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of usuarios">
-                <td>{{item.nombreProyecto}}</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
 </div>
-
