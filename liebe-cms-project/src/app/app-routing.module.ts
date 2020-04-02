@@ -15,6 +15,7 @@ import { EntradasComponent } from './Administracion/entradas/entradas.component'
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
+import { PagesComponent } from './Administracion/pages/pages.component';
 
 
 
@@ -70,8 +71,8 @@ const routes: Routes = [
         component: PaginasComponent
       },
       {
-        path: 'nueva-pagina',
-        component: NuevaPaginaComponent
+        path: 'pages',
+        component: PagesComponent
       },
       {
         path: 'home',

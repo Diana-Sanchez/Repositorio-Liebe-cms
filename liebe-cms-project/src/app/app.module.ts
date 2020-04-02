@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { DashboardComponent } from './Administracion/dashboard/dashboard.component';
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
+import { PagesComponent } from './Administracion/pages/pages.component';
 
 
 
@@ -54,6 +56,7 @@ import { RegistroAdministradorComponent } from './registro-administrador/registr
     DashboardComponent,
     AccesoAdministradorComponent,
     RegistroAdministradorComponent,
+    PagesComponent,
    
     
   ],
@@ -61,7 +64,8 @@ import { RegistroAdministradorComponent } from './registro-administrador/registr
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CKEditorModule
     
     
     

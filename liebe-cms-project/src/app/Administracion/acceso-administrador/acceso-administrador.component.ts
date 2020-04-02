@@ -28,6 +28,7 @@ export class AccesoAdministradorComponent implements OnInit {
     console.log(this.usuariosAdminIngresados);
     console.log('Fomulario válido:', this.accesoUsuarioAdmin.valid );
     this.accesoUsuarioAdmin.reset(); 
+    
   };
   constructor() { }
 
