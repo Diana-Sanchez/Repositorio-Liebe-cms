@@ -22,7 +22,19 @@ export class PagesComponent implements OnInit {
     incluirB:new FormControl('', [Validators.required, Validators.maxLength(2)])
   });
 
-  paginas:any = [];
+  paginas:any = [{
+    nombre:'Página principal',
+    descripcion:'Página promocional',
+    nombreMenu:'Landing page',
+    palabrasClaves: 'promocion, funciones',
+    paginaPadre:'Sí',
+    estado:'Activa',
+    incluirEncabezado:'Sí',
+    incluirMenu: 'Sí',
+    incluirPie:'No',
+    incluirB:'No'
+
+  }];
 
   get nombre(){
     return this.pagina.get('nombre');
