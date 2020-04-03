@@ -16,7 +16,6 @@
     margin-top: 10% !important;
   }
 }
-
 .posicion-icono{
   float: left;
   margin-right: 10px;
@@ -75,11 +74,11 @@
   font-size: 15px;
 }
 .estilo-estado{
-  padding: 5px 2px 5px 2px;
-  background-color: #b2525c;
+  color: #b2525c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
   text-align: center;
-  border-radius: 3px;
-  color: white;
+  font-size: 16px;
 }
 .btn-acciones{
   background-color: transparent;
@@ -132,9 +131,9 @@
   width: 100%;
   border-radius: 3px;
   padding: 5px;
-  margin-bottom: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 .btn-acciones-ver{
   background-color: transparent;
@@ -161,5 +160,48 @@
   font-family:'Inria Serif';
   font-size: 20px;
   margin-top: 5px;
+}
+/* Estilos exclusivos para las validaciones */
+.error{
+  color: red;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.input-error{
+  border-color: red;
+}
+.input-success{
+  border-color: #28a745;
+}
+#formulario-registro{
+  background-color: white;
+  padding:20px;
+  width: 40%;
+}
+#mensaje-valid{
+  padding: 10px 5px 10px 5px;
+  margin-top: 7px;
+  border-radius: 5px;
+  background-color: #d4edda;
+  color: #155724;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-deshabilitado{
+  border-radius: 3px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  background-color: rgb(138, 136, 136);
+  border-color: rgb(138, 136, 136);
+}
+.instruccion{
+  color: #b2525c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
 }
  
