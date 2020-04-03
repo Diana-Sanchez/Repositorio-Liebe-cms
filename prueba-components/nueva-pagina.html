@@ -18,13 +18,7 @@
         color: #105e62;
         font-size: 35px;
       }
-      #explicacion-area{
-        padding-top: 12px;
-        font-size: 1.2em;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #105e62;
-        padding-bottom: 20px;
-      }
+
       #indicador-pagina{
         font-family: 'Inria Serif';
         color: #105e62;
@@ -54,16 +48,6 @@
       }
       #contenedor-nueva-pagina{
         float: right;
-      }
-      #nota-informativa{
-        width: 100%;
-        padding: 25px 15px 25px 15px;
-        border-radius: 5px;
-        background-color: #d2fafb;
-        margin-bottom: 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 15px;
-        color:#105e62
       }
       #txt-nombre-pagina{
         width: 100%;
@@ -122,26 +106,24 @@
       #contenedor-aplicar{
         margin-top: 20px;
       }
+
+
+
+      .input-pagina{
+        width: 100%;
+        border-radius: 3px;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
     </style>
 </head>
 <body>
   <div id="contenedor-paginas">
-    <div id="nota-informativa">
-      Desde aquí puedes añadir a tu sitio las páginas que desees, Liebe te permite visualizar de manera inmediata tu diseño.
-    </div>
     <div id="paginas-cabecera">
       <div>
         <i class="fas fa-file-alt posicion-icono"></i>
       </div>
-      <div id="indicador-pagina">Páginas</div>
-      <div id="contenedor-nueva-pagina">
-        <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Guardar página</button>
-      </div>
-      <div id="contenedor-nueva-pagina">
-          <button type="button" class="btn-nueva-pagina" data-toggle="modal" data-target="#exampleModal">
-            Vista previa
-          </button>
-      </div>
+      <div id="indicador-pagina">Nueva página</div>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialoaria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -170,52 +152,53 @@
         </div>
       </div>
     </div>
-    <div id="explicacion-area">Añadir página.</div>
-    <label class="opciones-paginas">Nombre de la página</label>
-    <div id="contenedor-nombre-pagina">
-      <input type="text" id="txt-nombre-pagina" autofocus>
-    </div>
+    
     <div class="container-fluid">
       <div class="row" id="fila-opciones">
-        <div class="col-sm">
-          <div class="contenedor-opciones-finales">
-            <input type="checkbox" class="input-opciones-paginas">
-          </div>
-          <div class="contenedor-opciones-finales">
-            <label for="" class="opciones-paginas">Incluir encabezado de la página principal</label>
-          </div>
-          <div>
-            <input type="text" class="input-opciones-paginas" placeholder="Palabras claves">
-          </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div id="explicacion-area">Datos básicos</div>
+          <input class="input-pagina" type="text" placeholder="Nombre de la página"><br>
+          <input class="input-pagina" type="text" placeholder="Breve descripción"><br>
+          <input class="input-pagina" type="text" placeholder="Nombre en el menú"><br>
+          <input class="input-pagina" type="text" placeholder="Palabras claves"><br>
+          <select name="" id="" class="input-pagina">
+            <option value="">Página padre</option>
+            <option value="">Sí</option>
+            <option value="">No</option>
+          </select><br>
+          <select name="" id="" class="input-pagina">
+            <option value="">Estado de la página</option>
+            <option value="">Activo</option>
+            <option value="">Inactivo</option>
+          </select><br>
         </div>
-        <div class="col-sm">
-          <div class="contenedor-opciones-finales">
-            <input type="checkbox" class="input-opciones-paginas">
-          </div>
-          <div class="contenedor-opciones-finales">
-            <label for="" class="opciones-paginas">Incluir pie de página de la página principal</label>
-          </div>
-          <div>
-            <input type="text" class="input-opciones-paginas" placeholder="Breve descripción">
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="contenedor-opciones-finales">
-            <input type="checkbox" class="input-opciones-paginas">
-          </div>
-          <div class="contenedor-opciones-finales">
-            <label for="" class="opciones-paginas">Incluir en el ménú</label>
-          </div>
-          <div>
-            <input type="text" class="input-opciones-paginas" placeholder="titulo menú">
-          </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div id="explicacion-area">Más opciones</div>
+          <select name="" id="" class="input-pagina">
+            <option value="">Incluir encabezado</option>
+            <option value="">Sí</option>
+            <option value="">No</option>
+          </select><br>
+          <select name="" id="" class="input-pagina">
+            <option value="">Incluir menú</option>
+            <option value="">Activo</option>
+            <option value="">Inactivo</option>
+          </select><br>
+          <select name="" id="" class="input-pagina">
+            <option value="">Inclur pie de página</option>
+            <option value="">Sí</option>
+            <option value="">No</option>
+          </select><br>
+          <select name="" id="" class="input-pagina">
+            <option value="">Incluir breadcrump</option>
+            <option value="">Activo</option>
+            <option value="">Inactivo</option>
+          </select>
         </div>
       </div>
     </div>
     <textarea id="ckeditor" class="ckeditor"></textarea>
-    <div id="contenedor-aplicar">
-      <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Agregar contenido</button>
-    </div>
+    
   </div>
 
   

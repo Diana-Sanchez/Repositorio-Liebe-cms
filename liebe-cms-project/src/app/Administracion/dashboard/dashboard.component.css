@@ -6,7 +6,7 @@
     position: fixed;
 }
 .icono-dashboard{
-    font-size: 30px;
+    font-size: 20px;
     color:white;
 }
 .opcion-dashboard{
@@ -24,6 +24,12 @@
     padding-bottom: 3px;
     padding-top: 3px;
 }
+#contenedor-liebe{
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 750px) {
     #contenedor-dashboard{
       width: 100%;
@@ -42,6 +48,9 @@
       float: right;
     }
     .icono-dashboard{
-      font-size: 18px;
+      font-size: 20px;
+    }
+    #contenedor-liebe{
+      float: left;
     }
 }

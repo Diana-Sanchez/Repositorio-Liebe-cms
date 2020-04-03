@@ -28,6 +28,7 @@ import { DashboardComponent } from './Administracion/dashboard/dashboard.compone
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
 import { PagesComponent } from './Administracion/pages/pages.component';
+import { CuentaUsuarioComponent } from './Administracion/cuenta-usuario/cuenta-usuario.component';
 
 
 
@@ -57,6 +58,7 @@ import { PagesComponent } from './Administracion/pages/pages.component';
     AccesoAdministradorComponent,
     RegistroAdministradorComponent,
     PagesComponent,
+    CuentaUsuarioComponent,
    
     
   ],
