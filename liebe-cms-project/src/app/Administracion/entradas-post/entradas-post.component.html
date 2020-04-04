@@ -1,0 +1,126 @@
+<!-- Inicio de todos los post -->
+<div id="contenedor-paginas">
+    <div id="nota-informativa">
+     Visualiza y crea todas las entradas o post que puedes utilizar en tus páginas estáticas.
+    </div>
+    <div id="paginas-cabecera">
+      <div><i class="fas fa-file-alt posicion-icono"></i></div>
+      <div id="indicador-pagina">Entradas/Post</div>
+      <div id="contenedor-nueva-pagina">
+        <button class="btn-nueva-pagina" data-toggle="modal" data-target="#crear-nueva-pagina">Crear nueva entrada</button>
+      </div>
+      <div id="explicacion-area">Visualiza todos tus post</div>
+      <h2 *ngIf="posts.length==0">No hay información</h2>
+      <table *ngIf="posts.length!=0" class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Ilustración</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Fecha creación</th>
+            <th scope="col">Permiso para comentarios</th>
+            <th scope="col">Acciones</th>
+            <th scope="col">Visualizar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of posts">
+            <td>{{item.nombre}}</td>
+            <td><div class="ilustracion"><img [src]="item.imagen" alt="" ></div></td>
+            <td>Diana Sánchez</td>
+            <td>14/02/2020</td>
+            <td class="estilo-estado">Sí</td>
+            <td>
+              <div class="cont-btn-acciones">
+                <button class="btn-acciones"><i class="fas fa-pencil-alt ver"></i></button>
+                <button class="btn-acciones" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-trash-alt ver"></i></button>
+              </div>
+            </td>
+            <td>
+              <div class="cont-btn-acciones">
+                <button class="btn-acciones-ver btn-acciones"><i class="far fa-eye ver"></i></button>
+              </div>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--Inicio de la ventana modal para confirmar la eliminación de un post -->
+  <div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="identificador.liebe">
+            <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+          </div>
+          <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle">Confirmación</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         ¿Estás seguro que deseas eliminar el post?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="confirmar">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Inicio de la ventana modal para agregar un nuevo post -->
+
+  <div class="modal fade" id="crear-nueva-pagina" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="identificador.liebe">
+            <img src="../../../assets/img/logo-oficial-liebe-dark.png" alt="">
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div id="paginas-cabecera">
+              <div>
+                <i class="fas fa-file-alt posicion-icono"></i>
+              </div>
+              <div id="indicador-pagina">Entrada/Post</div>
+            </div>
+            <form [formGroup]="post"> <!-- Inicio de la etiqueta form -->
+                <div class="solicitud-datos">Ingresa los datos solicitados</div>
+                    <input formControlName ="nombre" [ngClass] = "{'input-error': nombre.invalid && (nombre.dirty || nombre.touched), 'input-success': nombre.valid}" class="input-pagina"  type="text" placeholder="Nombre del post">
+                    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error">
+                      <span *ngIf = "nombre.errors.maxlength">El nombre de la entrada excede la cantidad caracteres permitidos</span>
+                      <span *ngIf = "nombre.errors.required">El campo está vacío</span>
+                    </div>
+
+                    <input class="input-pagina" formControlName ="imagen" [ngClass] = "{'input-error': imagen.invalid && (imagen.dirty || imagen.touched), 'input-success':imagen.valid}" type="text" placeholder="Imagen representativa">
+                    <div *ngIf = "imagen.invalid && (imagen.dirty || imagen.touched)" class="error">
+                      <span *ngIf = "imagen.errors.required">El campo está vacío</span>
+                    </div>
+              <div class="solicitud-datos">
+                Ingresa el contenido que deseas visualizar en tu post.
+              </div>
+              <ckeditor [editor]="Editor" data="Hello, world!"></ckeditor>
+              <div id="mensaje-valid" *ngIf="post.valid">Datos correctos</div>
+              <div class="modal-footer">
+                <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
+                <button [disabled]="!post.valid" (click)= "guardarPost()" [ngClass]="{'btn-deshabilitado':post.invalid, 'confirmar':post.valid}" type="button">Confirmar</button>
+              </div>
+            </form>
+            <!-- Fin de la etiqueta form -->
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Fin de todos los post -->

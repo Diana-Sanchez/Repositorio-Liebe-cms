@@ -29,6 +29,7 @@ import { AccesoAdministradorComponent } from './Administracion/acceso-administra
 import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
 import { PagesComponent } from './Administracion/pages/pages.component';
 import { CuentaUsuarioComponent } from './Administracion/cuenta-usuario/cuenta-usuario.component';
+import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
 
 
 
@@ -59,6 +60,7 @@ import { CuentaUsuarioComponent } from './Administracion/cuenta-usuario/cuenta-u
     RegistroAdministradorComponent,
     PagesComponent,
     CuentaUsuarioComponent,
+    EntradasPostComponent,
    
     
   ],

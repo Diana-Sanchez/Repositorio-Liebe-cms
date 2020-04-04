@@ -11,11 +11,11 @@ import { PaginasComponent } from './Administracion/paginas/paginas.component';
 import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
 import { RecursosComponent } from './Administracion/recursos/recursos.component';
 import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
-import { EntradasComponent } from './Administracion/entradas/entradas.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
 import { PagesComponent } from './Administracion/pages/pages.component';
+import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
 
 
 
@@ -92,7 +92,7 @@ const routes: Routes = [
       },
       {
         path: 'entradas',
-        component: EntradasComponent
+        component: EntradasPostComponent
       }
       
     ]
