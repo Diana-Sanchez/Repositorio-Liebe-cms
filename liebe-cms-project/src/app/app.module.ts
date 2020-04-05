@@ -30,6 +30,7 @@ import { RegistroAdministradorComponent } from './registro-administrador/registr
 import { PagesComponent } from './Administracion/pages/pages.component';
 import { CuentaUsuarioComponent } from './Administracion/cuenta-usuario/cuenta-usuario.component';
 import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
+import { ComentariosComponent } from './Administracion/comentarios/comentarios.component';
 
 
 
@@ -61,6 +62,7 @@ import { EntradasPostComponent } from './Administracion/entradas-post/entradas-p
     PagesComponent,
     CuentaUsuarioComponent,
     EntradasPostComponent,
+    ComentariosComponent
    
     
   ],

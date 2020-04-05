@@ -6,16 +6,15 @@ import { AdminPrincipalComponent } from './Administracion/admin-principal/admin-
 import { InicioComponent } from './Administracion/inicio/inicio.component';
 import { UsuariosComponent } from './Administracion/usuarios/usuarios.component';
 import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
-import { EdicionUsuariosComponent } from './Administracion/edicion-usuarios/edicion-usuarios.component';
 import { PaginasComponent } from './Administracion/paginas/paginas.component';
 import { HomePrincipalComponent } from './Home/home-principal/home-principal.component';
 import { RecursosComponent } from './Administracion/recursos/recursos.component';
-import { NuevaPaginaComponent } from './Administracion/nueva-pagina/nueva-pagina.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { AccesoAdministradorComponent } from './Administracion/acceso-administrador/acceso-administrador.component';
 import { RegistroAdministradorComponent } from './registro-administrador/registro-administrador.component';
 import { PagesComponent } from './Administracion/pages/pages.component';
 import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
+import { ComentariosComponent } from './Administracion/comentarios/comentarios.component';
 
 
 
@@ -83,17 +82,18 @@ const routes: Routes = [
         component: NuevoUsuarioComponent
       },
       {
-        path: 'edicion-usuario',
-        component: EdicionUsuariosComponent
-      },
-      {
         path: 'recursos',
         component: RecursosComponent
       },
       {
         path: 'entradas',
         component: EntradasPostComponent
+      },
+      {
+        path: 'comentarios',
+        component: ComentariosComponent
       }
+
       
     ]
 }

@@ -1,0 +1,73 @@
+<!-- Inicio de todos los comentarios -->
+<div id="contenedor-paginas">
+    <div id="nota-informativa">
+     Administra cada uno de los comentarios existentes en los distintos posts. Puedes eliminar y marcar como apropiado o inapropiado todos aquellos comentarios que desees. 
+    </div>
+    <div id="paginas-cabecera">
+      <div><i class="fas fa-file-alt posicion-icono"></i></div>
+      <div id="indicador-pagina">Comentarios</div>
+      
+      <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Post</th>
+            <th scope="col">Autor del comentario</th>
+            <th scope="col">Detalle</th>
+            
+            <th scope="col">Tipo de comentario</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of comentarios">
+              <td>{{item.nombrePost}}</td>
+              <td>{{item.autor}}</td>
+              <td>{{item.detalle}}</td>
+              <td>
+                <div>
+                  <table>
+                    <tr class="efecto-tipo-c">
+                      <td class="estilos-td-c">Apropiado</td>
+                      <td class="estilos-td-c"><input type="radio"></td>
+                      <td class="estilos-td-c">Inapropiado</td>
+                      <td class="estilos-td-c"><input type="radio"></td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+              <td>
+                <div class="cont-btn-acciones">
+                  <button class="btn-acciones" data-toggle="modal" data-target="#confirmacion-borrar"><i    class="fas fa-trash-alt ver"></i></button>
+                </div>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!--Inicio de la ventana modal para confirmar la eliminación de un comentario -->
+  <div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="identificador.liebe">
+            <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+          </div>
+          <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle"><b>Confirmación</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         ¿Estás seguro que deseas eliminar este comentario?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="confirmar">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Fin de todos los comentarios -->
