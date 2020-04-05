@@ -11,7 +11,8 @@ export class EntradasPostComponent implements OnInit {
   // Creación de instancia tipo FormGroup para la creación de nuevas entradas.
   post = new FormGroup({
     nombre:new FormControl('', [Validators.required, Validators.maxLength(20)]),
-    imagen:new FormControl('', [Validators.required])
+    imagen:new FormControl('', [Validators.required]),
+    permiso:new FormControl('', [Validators.required])
   });
 
   posts:any = [];
@@ -22,6 +23,10 @@ export class EntradasPostComponent implements OnInit {
   get imagen(){
     return this.post.get('imagen');
   };
+  get permiso(){
+    return this.post.get('permiso');
+  };
+  
 
   constructor() { }
 

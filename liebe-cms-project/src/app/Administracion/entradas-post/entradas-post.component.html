@@ -29,7 +29,7 @@
             <td><div class="ilustracion"><img [src]="item.imagen" alt="" ></div></td>
             <td>Diana Sánchez</td>
             <td>14/02/2020</td>
-            <td class="estilo-estado">Sí</td>
+            <td class="estilo-estado">{{item.permiso}}</td>
             <td>
               <div class="cont-btn-acciones">
                 <button class="btn-acciones"><i class="fas fa-pencil-alt ver"></i></button>
@@ -104,10 +104,15 @@
                     <div *ngIf = "imagen.invalid && (imagen.dirty || imagen.touched)" class="error">
                       <span *ngIf = "imagen.errors.required">El campo está vacío</span>
                     </div>
-              <div class="solicitud-datos">
+                    <label for="">Habilitar comentarios Sí/No</label>
+                    <input class="input-pagina" formControlName ="permiso" [ngClass] = "{'input-error': permiso.invalid && (permiso.dirty || permiso.touched), 'input-success':permiso.valid}" type="text" placeholder="Habilitar comentarios">
+                    <div *ngIf = "permiso.invalid && (permiso.dirty || permiso.touched)" class="error">
+                      <span *ngIf = "permiso.errors.required">El campo está vacío</span>
+                    </div>
+              <br><div class="solicitud-datos">
                 Ingresa el contenido que deseas visualizar en tu post.
               </div>
-              <ckeditor [editor]="Editor" data="Hello, world!"></ckeditor>
+              <ckeditor [editor]="Editor" data="Hello, Liebe"></ckeditor>
               <div id="mensaje-valid" *ngIf="post.valid">Datos correctos</div>
               <div class="modal-footer">
                 <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
