@@ -6,8 +6,8 @@
     <div id="paginas-cabecera">
       <div><i class="fas fa-file-alt posicion-icono"></i></div>
       <div id="indicador-pagina">Comentarios</div>
-      
-      <table class="table table-bordered table-hover">
+      <h2 *ngIf="comentarios.length==0">No hay información</h2>
+      <table *ngIf="comentarios.length!=0" class="table table-bordered table-hover">
         <thead class="thead-light">
           <tr>
             <th scope="col">Post</th>
