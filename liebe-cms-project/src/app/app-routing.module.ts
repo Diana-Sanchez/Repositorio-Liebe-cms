@@ -75,7 +75,7 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        component: InicioComponent 
+        component: InicioComponent,
       },
       {
         path:'nuevo-usuario',
