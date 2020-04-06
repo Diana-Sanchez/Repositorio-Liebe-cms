@@ -163,7 +163,7 @@
 }
 /* Estilos exclusivos para las validaciones */
 .error{
-  color: red;
+  color: rgb(116, 43, 43);
   font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: right;
@@ -199,9 +199,12 @@
   border-color: rgb(138, 136, 136);
 }
 .instruccion{
-  color: #b2525c;
+  color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-weight: 600;
+}
+.nuevo-fondo{
+  background: linear-gradient(to right, #d2fafb, #105e62 );
 }
  

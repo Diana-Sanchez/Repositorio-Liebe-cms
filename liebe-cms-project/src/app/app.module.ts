@@ -31,6 +31,7 @@ import { PagesComponent } from './Administracion/pages/pages.component';
 import { CuentaUsuarioComponent } from './Administracion/cuenta-usuario/cuenta-usuario.component';
 import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
 import { ComentariosComponent } from './Administracion/comentarios/comentarios.component';
+import { PlantillasComponent } from './Administracion/plantillas/plantillas.component';
 
 
 
@@ -62,7 +63,8 @@ import { ComentariosComponent } from './Administracion/comentarios/comentarios.c
     PagesComponent,
     CuentaUsuarioComponent,
     EntradasPostComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    PlantillasComponent
    
     
   ],

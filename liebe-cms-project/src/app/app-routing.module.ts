@@ -15,6 +15,7 @@ import { RegistroAdministradorComponent } from './registro-administrador/registr
 import { PagesComponent } from './Administracion/pages/pages.component';
 import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
 import { ComentariosComponent } from './Administracion/comentarios/comentarios.component';
+import { PlantillasComponent } from './Administracion/plantillas/plantillas.component';
 
 
 
@@ -92,7 +93,12 @@ const routes: Routes = [
       {
         path: 'comentarios',
         component: ComentariosComponent
+      },
+      {
+        path: 'personalizacion',
+        component: PlantillasComponent
       }
+
 
       
     ]

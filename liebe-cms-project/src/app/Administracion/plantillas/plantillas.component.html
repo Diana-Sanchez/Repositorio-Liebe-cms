@@ -1,0 +1,136 @@
+<!-- Inicio de todas las plantillas -->
+<div id="contenedor-paginas">
+    <div id="nota-informativa">
+     Aplica en tu sitio cualquier tema que desees. Recuerda que Liebe también te permite diseñar tu propia plantilla.
+    </div>
+    <div id="paginas-cabecera">
+      <div><i class="fas fa-palette posicion-icono"></i></div>
+      <div id="indicador-pagina">Personalización</div>
+      <div id="contenedor-nueva-pagina">
+        <button class="btn-nueva-pagina" data-toggle="modal" data-target="#crear-nueva-pagina">Añadir nueva plantilla</button>
+      </div>
+      <div id="explicacion-area">Plantillas que puedes aplicar a tu sitio.</div>
+    </div>
+    <div *ngIf="plantillas.length==0"><h2>No hay información</h2></div>
+    <div class="contenedor-plantillas">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3" *ngFor="let item of plantillas">
+            <div class="card border-success mb-3">
+              <div class="card-header bg-transparent border-success"><b>{{item.nombre}}</b></div>
+              <img [src]="item.imagen" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">{{item.descripcion}}</p>
+                  <table class="tabla-acciones">
+                    <tr>
+                      <td>Activar</td>
+                      <td>Desactivar</td>
+                      <td>Eliminar</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="" class="estilo-borrador"><i class="fas fa-check-square"></i></a>
+                      </td>
+                      <td><a href="" class="estilo-borrador"><i class="fas fa-times"></i></a></td>
+                      <td><a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a></td>
+                    </tr>
+                  </table>
+                </div>
+              <div class="card-footer bg-transparent border-success"><b>Estado:</b> Activado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Inicio de la ventana modal para confirmar la eliminación de un post -->
+  <div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="identificador.liebe">
+            <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+          </div>
+          <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle">Confirmación</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         ¿Estás seguro que deseas eliminar el post?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="confirmar">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Inicio de la ventana modal para agregar un nuevo post -->
+
+  <div class="modal fade" id="crear-nueva-pagina" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content nuevo-fondo">
+        <div class="modal-header">
+          <div class="identificador.liebe">
+            <img src="../../../assets/img/logo-oficial-liebe-dark.png" alt="">
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div id="paginas-cabecera">
+              <div>
+                <i class="fas fa-palette posicion-icono"></i>
+              </div>
+              <div id="indicador-pagina">Nueva plantilla</div>
+            </div>
+            <form [formGroup]="plantilla"> <!-- Inicio de la etiqueta form -->
+              <div class="solicitud-datos">Ingresa los datos solicitados</div>
+                <input formControlName ="nombre" [ngClass] = "{'input-error': nombre.invalid && (nombre.dirty || nombre.touched),'input-success': nombre.valid}" class="input-pagina"  type="text" placeholder="Nombre de la plantilla">
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error">
+                  <span *ngIf = "nombre.errors.maxlength">El nombre de la página excede la cantidad caracteres permitidos</span>
+                  <span *ngIf = "nombre.errors.required">El campo está vacío</span>
+                </div>
+                <input class="input-pagina" formControlName ="descripcion" [ngClass] = "{'input-error': descripcion.invalid && (descripcion.dirty || descripcion.touched), 'input-success':descripcion.valid}" type="text" placeholder="Descripción">
+                <div *ngIf = "descripcion.invalid && (descripcion.dirty || descripcion.touched)" class="error">
+                  <span *ngIf = "descripcion.errors.maxlength">La descripcón excede la cantidad de caracteres permitidos</span>
+                  <span *ngIf = "descripcion.errors.required">El campo está vacío</span>
+                </div>
+                <input class="input-pagina" formControlName ="imagen" [ngClass] = "{'input-error': imagen.invalid && (imagen.dirty || imagen.touched), 'input-success':imagen.valid}" type="text" placeholder="Imagen representativa">
+                <div *ngIf = "imagen.invalid && (imagen.dirty || imagen.touched)" class="error">
+                  <span *ngIf = "imagen.errors.maxlength">La descripcón excede la cantidad de caracteres permitidos</span>
+                  <span *ngIf = "imagen.errors.required">El campo está vacío</span>
+                </div>
+              <div class="solicitud-datos">
+                Ingresa el contenido que deseas visualizar en tu página
+              </div>
+              <ckeditor [editor]="Editor" data="Hello, world!"></ckeditor>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <textarea class="adicional" rows="10"></textarea>
+                  </div>
+                  <div class="col-sm">
+                    <textarea class="adicional" rows="10"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
+                <button [disabled]="!plantilla.valid" (click)= "guardarPlantilla()" [ngClass]="{'btn-deshabilitado':plantilla.invalid, 'confirmar':plantilla.valid}" type="button">Confirmar</button>
+              </div>
+            </form>
+            <!-- Fin de la etiqueta form -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fin de todas las plantillas -->
+
