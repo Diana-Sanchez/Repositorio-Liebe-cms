@@ -161,9 +161,12 @@
   font-size: 20px;
   margin-top: 5px;
 }
+.nuevo-fondo{
+  background: linear-gradient(to right, #d2fafb, #105e62 );
+}
 /* Estilos exclusivos para las validaciones */
 .error{
-  color: red;
+  color: rgb(116, 43, 43);
   font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: right;

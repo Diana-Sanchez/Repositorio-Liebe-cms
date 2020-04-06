@@ -11,70 +11,42 @@
         Añadir nuevo usuario
       </button>
     </div>
-    
     <div id="explicacion-area">Personas registradas en tu plataforma.</div>
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">Usuario</th>
-          <th scope="col">Tipo</th>
-          <th scope="col">Correo electrónico</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>Diana Sánchez</b><br><a class="acciones-paginas" href="" routerLink = "/admin/edicion-usuario">editar</a></td>
-          <td>diana-s</td>
-          <td>admin</td>
-          <td>yolibeth@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
-          <td>montse-s</td>
-          <td>user-n</td>
-          <td>montse.com</td>
-        </tr>
-        <tr>
-          <td>Bessy Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
-          <td>bessy-s</td>
-          <td>user-n</td>
-          <td>bessy.com</td>
-        </tr>
-        <tr>
-          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
-          <td>montse-s</td>
-          <td>user-n</td>
-          <td>montse.com</td>
-        </tr>
-        <tr>
-          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
-          <td>montse-s</td>
-          <td>user-n</td>
-          <td>montse.com</td>
-        </tr>
-        <tr>
-          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
-          <td>montse-s</td>
-          <td>user-n</td>
-          <td>montse.com</td>
-        </tr>
-        <tr>
-          <td>Montserrat Sánchez<br><a href="" class="acciones-paginas">editar</a><a href="" class="acciones-paginas">eliminar</a></td>
-          <td>montse-s</td>
-          <td>user-n</td>
-          <td>montse.com</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
+  <div *ngIf="usuarios.length==0"><h2>No hay información</h2></div>
+  <table class="table table-bordered table-hover" *ngIf= "usuarios.length!=0" style="font-size: 15px;">
+    <thead class="thead-light">
+      <tr>
+        
+        <th scope="col">Nombre de usuario</th>
+        <th scope="col">Rol/tipo de usuario</th>
+        <th scope="col">Fecha creación</th>
+        <th scope="col">Origen</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of usuarios">
+        <td>{{item.nombre}}</td>
+        <td>{{item.rol}}</td>
+        <td>14/02/2020</td>
+        <td> - </td>
+        <td>
+          <div class="cont-btn-acciones">
+            <button class="btn-acciones"><i class="fas fa-pencil-alt ver"></i></button>
+            <button class="btn-acciones" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-trash-alt ver"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- Ventana modal para añadir un nuevo usuario-->
 
 <div class="modal fade" id="modal-nuevo-usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"     aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
+    <div class="modal-content nuevo-fondo">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalScrollableTitle">
           Registro de nuevo usuario
@@ -90,26 +62,62 @@
             <div id="indicador-pagina">Usuarios</div>
             <div id="explicacion-area">Añade usuarios a tu sitio.</div>
           </div>
-          <form action="" id="formulario-registro">
-              <label for="" class="lbl-registro-proyecto">Dirección de correo electrónico</label><br>
-              <input type="text" id="txt-correo" class="input-registro" autofocus><br>
-              <label for="" class="lbl-registro-proyecto">Nombre de usuario</label><br>
-              <input type="text" id="txt-nombre-usuario" class="input-registro"><br>
-              <label for="" class="lbl-registro-proyecto">Contraseña</label><br>
-              <input type="text" id="txt-contrasena" class="input-registro"><br>
-              <label for="" class="lbl-registro-proyecto">Confirmar contraseña</label><br>
-              <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
-              <label for="" class="lbl-registro-proyecto">Tipo usuario admin/user-n</label><br>
-              <input type="text" id="txt-confirmacion-contrasena" class="input-registro"><br>
+          <form [formGroup]="usuario">
+              
+
+              <label for="" class="lbl-registro-proyecto">Nombre de usuario</label>
+              <input formControlName ="nombre" [ngClass] = "{'input-error': nombre.invalid && (nombre.dirty || nombre.touched), 'input-success': nombre.valid}"type="text" id="txt-nombre-usuario" class="input-registro">
+              <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error">
+                <span *ngIf = "nombre.errors.required">El campo está vacío</span>
+                <span *ngIf = "nombre.errors.maxlength">El nombre de usuario ingresado excede la cantidad de caracteres permitidos</span>
+              </div>
+
+              <label for="" class="lbl-registro-proyecto">Rol/Tipo de usuario</label>
+              <input formControlName ="rol" [ngClass] = "{'input-error': rol.invalid && (rol.dirty || rol.touched), 'input-success': rol.valid}" type="text" id="txt-contrasena" class="input-registro">
+              <div *ngIf="rol.invalid && (rol.dirty || rol.touched)" class="error">
+                <span *ngIf = "rol.errors.required">El campo está vacío</span>
+              </div>
+              <label for="" class="lbl-registro-proyecto">Contraseña provisional</label>
+              <input formControlName ="password" [ngClass] = "{'input-error': password.invalid && (password.dirty || password.touched), 'input-success': password.valid}" type="text" id="txt-contrasena" class="input-registro">
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+                <span *ngIf = "password.errors.required">El campo está vacío</span>
+                <span *ngIf = "password.errors.maxlength">La contraseña ingresada excede la cantidad de caracteres permitidos</span>
+                <span *ngIf = "password.errors.minlength">La contraseña ingresada es muy corta</span>
+              </div>
           </form>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn-nuevo-usuario">Guardar nuevo usuario</button>
+        <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
+        <button [disabled]="!usuario.valid" (click)= "guardarUsuario()" [ngClass]="{'btn-deshabilitado':usuario.invalid, 'confirmar':usuario.valid}">Guardar nuevo usuario</button>
       </div>
     </div>
   </div>
 </div>
 <!-- Fin de la ventana modal para añadir un nuevo usuario-->
+
+<!--Inicio de la ventana modal para confirmar la eliminación de un comentario -->
+<div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="identificador.liebe">
+          <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+        </div>
+        <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle"><b>Confirmación</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       ¿Estás seguro que deseas eliminar este usuario?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="confirmar">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Fin del componente usuarios/administración de Liebe-->
