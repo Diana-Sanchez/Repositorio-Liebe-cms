@@ -1,94 +1,221 @@
+<!-- Inicio de todos los recurso -->
 <div id="contenedor-paginas">
-    <!--Inicio cabecera-->
-    <div id="nota-informativa">
-      Incluye en tu sitio todas la imágenes, vídeos, documentos, entre otros recursos que requieras.
-    </div>
-    <div id="paginas-cabecera">
-      <div>
-        <i class="fas fa-photo-video posicion-icono"></i>
+  <div id="nota-informativa">
+   Administra cada uno de los comentarios existentes en los distintos posts. Puedes eliminar y marcar como inapropiado todos aquellos que desees. 
+  </div>
+  <div id="paginas-cabecera">
+    <div><i class="fas fa-photo-video posicion-icono"></i></div>
+    <div id="indicador-pagina">Mis recursos</div>
+  </div>
+  <!-- Contenido principal de "Mis recursos" -->
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed estilo-enlace" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Imágenes
+          </button>
+          <div class="nuevo-recurso">
+            <a href="" class="estilo-enlace"><i class="fas fa-plus-circle"></i></a>
+          </div>
+        </h2>
       </div>
-      <div id="indicador-pagina">Multimedia</div>
-      <div id="contenedor-nueva-pagina">
-        <button class="btn-nueva-pagina" routerLink="/admin/nuevo-pagina">Añadir nuevo recurso</button>
-      </div>
-    </div>
-    <div id="explicacion-area">Tus recursos multimedia</div>
-    <!--Fin cabecera-->
-    
-    <!--Inicio de imágenes-->
-    <div class="categoria-recurso">Imágenes</div>
-    <div class="container-fluid">
-      <!--fila 1-->
-      <div class="row posicion-fila">
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recursos-img-1.jpg" class="galeria" alt="">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recursos-img-2.jpg" class="galeria" alt="">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recursos-img-3.jpg" class="galeria" alt="">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recursos-img-4.jpg" class="galeria" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Fin imágenes-->
-
-    <!--Inicio de vídeos-->
-    <div class="categoria-recurso">Vídeos</div>
-    <div class="container-fluid">
-      <div class="row posicion-fila">
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recurso-video.png" class="galeria" alt="">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recurso-video.png" class="galeria" alt="">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recurso-video.png" class="galeria" alt="">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-imagenes">
-            <img src="../../../assets/img/recurso-video.png" class="galeria" alt="">
-          </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="card">
+                  <img src="../../../assets/img/salud-2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Doctor en casa</h5>
+                    <a href="#" class="btn-detalles" data-toggle="modal" data-target="#modal-ver-detalle">Ver detalles</a>
+                    <div class="cont-borrador-recurso">
+                      <a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="card">
+                  <img src="../../../assets/img/salud-2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Doctor en casa</h5>
+                    <a href="#" class="btn-detalles" data-toggle="modal" data-target="#modal-ver-detalle">Ver detalles</a>
+                    <div class="cont-borrador-recurso">
+                      <a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
         </div>
       </div>
     </div>
-
-    <!--Otros archivos-->
-    <div class="categoria-recurso">Documentos</div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-         <div class="cont-recursos-archivos"><i class="fas fa-file-word recurso-archivo"></i></div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed estilo-enlace" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Vídeos
+          </button>
+          <div class="nuevo-recurso">
+            <a href="" class="estilo-enlace"><i class="fas fa-plus-circle"></i></a>
+          </div>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="card">
+                  <img src="../../../assets/img/salud-2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Doctor en casa</h5>
+                    <a href="#" class="btn-detalles" data-toggle="modal" data-target="#modal-ver-detalle">Ver detalles</a>
+                    <div class="cont-borrador-recurso">
+                      <a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-archivos"><i class="fas fa-file-word recurso-archivo"></i></div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-archivos"><i class="fas fa-file-word recurso-archivo"></i></div>
-        </div>
-        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 fila">
-          <div class="cont-recursos-archivos"><i class="fas fa-file-word recurso-archivo"></i></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed estilo-enlace" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Archivos genéricos
+          </button>
+          <div class="nuevo-recurso">
+            <a href="" class="estilo-enlace"><i class="fas fa-plus-circle"></i></a>
+          </div>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="card">
+                  <div class="cont-archivo"><i class="fas fa-file-word"></i></div>
+                  <div class="card-body">
+                    <div class="dimension-titulo">
+                      <h5 class="card-title">Artículo "Buena salud"</h5>
+                    </div>
+                    <a href="#" class="btn-detalles" data-toggle="modal" data-target="#modal-ver-detalle">Ver detalles</a>
+                    <div class="cont-borrador-recurso">
+                      <a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="card">
+                  <div class="cont-archivo"><i class="fas fa-file-excel"></i></div>
+                  <div class="card-body">
+                    <div class="dimension-titulo">
+                      <h5 class="card-title">Estadísticas de la OMS sobre el control de hambre en África</h5>
+                    </div>
+                    <a href="#" class="btn-detalles" data-toggle="modal" data-target="#modal-ver-detalle">Ver detalles</a>
+                    <div class="cont-borrador-recurso">
+                      <a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2">
+                <div class="card">
+                  <div class="cont-archivo"><i class="fas fa-file-pdf"></i></div>
+                  <div class="card-body">
+                    <div class="dimension-titulo">
+                      <h5 class="card-title">Reglamentos de la salud pública</h5>
+                    </div>
+                    <a href="#" class="btn-detalles" data-toggle="modal" data-target="#modal-ver-detalle">Ver detalles</a>
+                    <div class="cont-borrador-recurso">
+                      <a href="" class="estilo-borrador" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-eraser"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  
+<!--Inicio de la ventana modal para confirmar la eliminación de un recurso -->
+<div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="identificador.liebe">
+          <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+        </div>
+        <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle"><b>Confirmación</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       ¿Estás seguro que deseas eliminar este recurso?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="confirmar">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Inicio de la ventana modal para ver detalles de los recursos -->
+<div class="modal fade" id="modal-ver-detalle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+    <div class="modal-content redefinicion">
+      <div class="modal-header">
+        <div class="identificador.liebe">
+          <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+        </div>
+        <h5 class="modal-title encabezado-detalle" id="exampleModalCenterTitle">Detalles</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="contenedor-det">
+          <img class="dimension-recurso-detalle" src="../../../assets/img/salud-2.jpg" alt="">
+        </div>
+        <div>
+          <table class="tabla-detalle">
+            <tr>
+              <td>Nombre:</td>
+              <td>doctor_en_casa</td>
+            </tr>
+            <tr>
+              <td>Tipo de archivo:</td>
+              <td>Archivo JPG (.jpg)</td>
+            </tr>
+          </table>
+          <div class="indicacion-shortcut">
+            Ingresa este shorcut para insertar esta imagen en tus páginas estáticas o posts
+          </div>
+          <div class="alert alert-dark" role="alert">
+            tipo:'imagen',id:'56bcvb5545shjh44'
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancelar" data-dismiss="modal">¡Entendido!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Fin de todos los recursos -->
