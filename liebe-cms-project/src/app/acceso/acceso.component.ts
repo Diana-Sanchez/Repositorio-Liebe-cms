@@ -10,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AccesoComponent implements OnInit {
   // Creando instancia del tipo FormGroup para el acceso de usuarios normales.
   acessoUsuarioNormal = new FormGroup({
-    nombreDeUsuario:new FormControl('', [Validators.required, Validators.maxLength(8)]),
+    nombreDeUsuario:new FormControl('', [Validators.required, Validators.maxLength(12)]),
     passwordDeUsuario:new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(10)])
   });
 

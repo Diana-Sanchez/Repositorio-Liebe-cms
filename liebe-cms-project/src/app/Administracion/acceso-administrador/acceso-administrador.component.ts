@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AccesoAdministradorComponent implements OnInit {
   // Creación de instancia tipo FormGroup para accesos usuarios administradores
   accesoUsuarioAdmin = new FormGroup({
-    nombreDeAdmin:new FormControl('', [Validators.required, Validators.maxLength(8)]),
+    nombreDeAdmin:new FormControl('', [Validators.required, Validators.maxLength(12)]),
     passwordDeAdmin:new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(10)])
   });
   usuariosAdminIngresados: any = [];
