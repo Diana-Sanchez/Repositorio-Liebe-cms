@@ -1,0 +1,51 @@
+.contenedor{
+  position: block;
+  background: url("../../../assets/img/fondo-mi-sitio-web.jpg"),no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+#contenido-principal{
+  font-size: 7em;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10%;
+  padding-left: 2%;
+  font-family: 'Fredoka One', cursive;
+}
+.contenido-entrada{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.titulo-entrada{
+    font-size: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.contenedor-img{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.img-entrada{
+    border-radius: 3px;
+}
+.comentarios{
+    color: orange;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.contenedor-comentario{
+    padding-left: 20px;
+    padding-right: 20px;
+}

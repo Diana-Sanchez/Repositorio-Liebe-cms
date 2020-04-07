@@ -16,6 +16,8 @@ import { PagesComponent } from './Administracion/pages/pages.component';
 import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
 import { ComentariosComponent } from './Administracion/comentarios/comentarios.component';
 import { PlantillasComponent } from './Administracion/plantillas/plantillas.component';
+import { AppPrincipalComponent } from './UsuarioRegistrado/app-principal/app-principal.component';
+import { SitioWebComponent } from './UsuarioRegistrado/sitio-web/sitio-web.component';
 
 
 
@@ -102,7 +104,15 @@ const routes: Routes = [
 
       
     ]
-}
+  },
+  {
+    path: 'MiSitioWeb',
+    component: AppPrincipalComponent,
+    children:[{
+      path:'',
+      component: SitioWebComponent
+    }]
+  }
 ];
 
 

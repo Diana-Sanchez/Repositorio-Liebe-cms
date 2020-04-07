@@ -32,6 +32,11 @@ import { CuentaUsuarioComponent } from './Administracion/cuenta-usuario/cuenta-u
 import { EntradasPostComponent } from './Administracion/entradas-post/entradas-post.component';
 import { ComentariosComponent } from './Administracion/comentarios/comentarios.component';
 import { PlantillasComponent } from './Administracion/plantillas/plantillas.component';
+import { AppPrincipalComponent } from './UsuarioRegistrado/app-principal/app-principal.component';
+import { NavbarUsuarioResgistradoComponent } from './UsuarioRegistrado/navbar-usuario-resgistrado/navbar-usuario-resgistrado.component';
+import { SitioWebComponent } from './UsuarioRegistrado/sitio-web/sitio-web.component';
+import { FooterComponent } from './UsuarioRegistrado/footer/footer.component';
+
 
 
 
@@ -64,7 +69,12 @@ import { PlantillasComponent } from './Administracion/plantillas/plantillas.comp
     CuentaUsuarioComponent,
     EntradasPostComponent,
     ComentariosComponent,
-    PlantillasComponent
+    PlantillasComponent,
+    AppPrincipalComponent,
+    NavbarUsuarioResgistradoComponent,
+    SitioWebComponent,
+    FooterComponent,
+    
    
     
   ],

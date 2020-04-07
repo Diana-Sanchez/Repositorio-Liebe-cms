@@ -1,0 +1,47 @@
+#pie-pagina{
+    width: 100%;
+    background-color: #105e62;
+    padding-bottom: 3%;
+    float: left;
+    
+ }
+ .posicion-fila-footer{
+   padding-top: 5%;
+   
+ }
+ .titulo-footer{
+   font-size: 18px;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 600;
+ }
+ .separador-footer{
+   background-color: white;
+ }
+ .separador-footer-final{
+   background-color: white;
+   margin-left: 4%;
+   margin-right: 4%;
+ }
+ .opciones-footer{
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 16px;
+ }
+ .efecto-opciones:hover{
+   color: #99d8d0;
+   cursor: default;
+ }
+ #final-footer-texto{
+   text-align: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 16px;
+   font-weight: 600;
+   color: white;
+   padding-bottom: 30px;
+ }
+ #footer-persistente{
+   background-color: #105e62;
+   padding-top: 2%;
+   padding-bottom: 1%;
+ }

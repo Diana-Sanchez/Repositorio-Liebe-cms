@@ -20,7 +20,7 @@
       <div id="contenedor-forgot-pass"><a id="anchor-password" href="#">¿Has olvidado tu contraseña?</a></div><br>
       <div id="mensaje-valid" *ngIf="acessoUsuarioNormal.valid">Datos correctos</div>
       <div id="contenedor-btn-login">
-        <button [disabled]="!acessoUsuarioNormal.valid" (click)= "guardarAccesoUsuarioNormal()" [ngClass]="{'btn-deshabilitado':acessoUsuarioNormal.invalid, 'btn-login':acessoUsuarioNormal.valid}" routerLink = "/admin/home">Acceder</button>
+        <button [disabled]="!acessoUsuarioNormal.valid" (click)= "guardarAccesoUsuarioNormal()" [ngClass]="{'btn-deshabilitado':acessoUsuarioNormal.invalid, 'btn-login':acessoUsuarioNormal.valid}" routerLink = "/MiSitioWeb">Acceder</button>
       </div>
     </form>
   </div>
