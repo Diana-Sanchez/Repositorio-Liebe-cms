@@ -138,46 +138,59 @@
                       <span *ngIf = "palabrasClaves.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">Página padre Sí/No</label>
-                    <input class="input-pagina" formControlName ="paginaPadre" [ngClass] = "{'input-error': paginaPadre.invalid && (paginaPadre.dirty || paginaPadre.touched), 'input-success': paginaPadre.valid}" type="text" placeholder="Página padre"><br>
+                    <label class="instruccion">¿Desea incluir como página padre?</label><br>
+                    <select class="input-pagina" formControlName = "paginaPadre" [ngClass] = "{'input-error': paginaPadre.invalid && (paginaPadre.dirty || paginaPadre.touched), 'input-success': paginaPadre.valid}">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
                     <div *ngIf = "paginaPadre.invalid && (paginaPadre.dirty || paginaPadre.touched)" class="error">
-                      <span *ngIf = "paginaPadre.errors.maxlength">El dato ingresado excede la  cantidad de caracteres permitidos</span>
                       <span *ngIf = "paginaPadre.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">Estado de la página Activo/Inactivo</label>
-                    <input class="input-pagina" formControlName ="estado" [ngClass] = "{'input-error': estado.invalid && (estado.dirty || estado.touched), 'input-success': estado.valid}" type="text" placeholder="Estado de la página">
+                    <label class="instruccion">Seleccione el estado de la página</label><br>
+                    <select class="input-pagina" formControlName = "estado" [ngClass] = "{'input-error': estado.invalid && (estado.dirty || estado.touched), 'input-success': estado.valid}">
+                      <option value="Activa">Activo</option>
+                      <option value="Inactiva">Inactivo</option>
+                    </select>
                     <div *ngIf = "estado.invalid && (estado.dirty || estado.touched)" class="error">
                       <span *ngIf = "estado.errors.required">El campo está vacío</span>
                     </div>
                   </div>
                   <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="solicitud-datos">Más opciones</div>
-                    <label class="instruccion">Incluir encabezado Sí/No</label>
-                    <input class="input-pagina" formControlName ="incluirEncabezado" [ngClass] = "{'input-error': incluirEncabezado.invalid && (incluirEncabezado.dirty || incluirEncabezado.touched), 'input-success': incluirEncabezado.valid}" type="text" placeholder="Incluir encabezado">
+                    <label class="instruccion">¿Desea incluir encabezado?</label><br>
+                    <select class="input-pagina" formControlName = "incluirEncabezado" [ngClass] = "{'input-error': incluirEncabezado.invalid && (incluirEncabezado.dirty || incluirEncabezado.touched), 'input-success': incluirEncabezado.valid}">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
                     <div *ngIf = "incluirEncabezado.invalid && (incluirEncabezado.dirty || incluirEncabezado.touched)" class="error">
-                      <span *ngIf = "incluirEncabezado.errors.maxlength">El dato ingresado excede la  cantidad de caracteres permitidos</span>
                       <span *ngIf = "incluirEncabezado.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">Incluir menú Sí/No</label>
-                    <input class="input-pagina" formControlName ="incluirMenu" [ngClass] = "{'input-error': incluirMenu.invalid && (incluirMenu.dirty || incluirMenu.touched), 'input-success': incluirMenu.valid}" type="text" placeholder="Incluir menú">
+                    <label class="instruccion">¿Desea incluir menú?</label><br>
+                    <select class="input-pagina" formControlName = "incluirMenu" [ngClass] = "{'input-error': incluirMenu.invalid && (incluirMenu.dirty || incluirMenu.touched), 'input-success': incluirMenu.valid}">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
                     <div *ngIf = "incluirMenu.invalid && (incluirMenu.dirty || incluirMenu.touched)" class="error">
-                      <span *ngIf = "incluirMenu.errors.maxlength">El dato ingresado excede la  cantidad de caracteres permitidos</span>
                       <span *ngIf = "incluirMenu.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">Incluir pie de página Sí/No</label>
-                    <input class="input-pagina" formControlName ="incluirPie" [ngClass] = "{'input-error': incluirPie.invalid && (incluirPie.dirty || incluirPie.touched), 'input-success': incluirPie.valid}" type="text" placeholder="Incluir pie de página"><br>
+                    <label class="instruccion">¿Desea incluir pie de página?</label><br>
+                    <select class="input-pagina" formControlName = "incluirPie" [ngClass] = "{'input-error': incluirPie.invalid && (incluirPie.dirty || incluirPie.touched), 'input-success': incluirPie.valid}">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
                     <div *ngIf = "incluirPie.invalid && (incluirPie.dirty || incluirPie.touched)" class="error">
-                      <span *ngIf = "incluirPie.errors.maxlength">El dato ingresado excede la  cantidad de caracteres permitidos</span>
                       <span *ngIf = "incluirPie.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">Incluir breadcrump Sí/No</label>
-                    <input class="input-pagina" formControlName ="incluirB" [ngClass] = "{'input-error': incluirB.invalid && (incluirB.dirty || incluirB.touched), 'input-success': incluirB.valid}" type="text" placeholder="Incluir breadcrump">
+                    <label class="instruccion">¿Desea incluir breadcrumb?</label><br>
+                    <select class="input-pagina" formControlName = "incluirB" [ngClass] = "{'input-error': incluirB.invalid && (incluirB.dirty || incluirB.touched), 'input-success': incluirB.valid}">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
                     <div *ngIf = "incluirB.invalid && (incluirB.dirty || incluirB.touched)" class="error">
-                      <span *ngIf = "incluirB.errors.maxlength">El dato ingresado excede la  cantidad de caracteres permitidos</span>
                       <span *ngIf = "incluirB.errors.required">El campo está vacío</span>
                     </div>
                   </div>

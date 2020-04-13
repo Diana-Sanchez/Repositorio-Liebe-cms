@@ -14,12 +14,12 @@ export class PagesComponent implements OnInit {
     descripcion:new FormControl('', [Validators.required, Validators.maxLength(30)]),
     nombreMenu:new FormControl('', [Validators.required, Validators.maxLength(10)]),
     palabrasClaves:new FormControl('', [Validators.required, Validators.maxLength(30)]),
-    paginaPadre:new FormControl('', [Validators.required, Validators.maxLength(2)]),
+    paginaPadre:new FormControl('', [Validators.required]),
     estado:new FormControl('', [Validators.required]),
-    incluirEncabezado:new FormControl('', [Validators.required, Validators.maxLength(2)]),
-    incluirMenu:new FormControl('', [Validators.required, Validators.maxLength(2)]),
-    incluirPie:new FormControl('', [Validators.required, Validators.maxLength(2)]),
-    incluirB:new FormControl('', [Validators.required, Validators.maxLength(2)])
+    incluirEncabezado:new FormControl('', [Validators.required]),
+    incluirMenu:new FormControl('', [Validators.required]),
+    incluirPie:new FormControl('', [Validators.required]),
+    incluirB:new FormControl('', [Validators.required])
   });
 
   paginas:any = [{
