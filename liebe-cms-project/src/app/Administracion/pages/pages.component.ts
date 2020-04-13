@@ -19,7 +19,8 @@ export class PagesComponent implements OnInit {
     incluirEncabezado:new FormControl('', [Validators.required]),
     incluirMenu:new FormControl('', [Validators.required]),
     incluirPie:new FormControl('', [Validators.required]),
-    incluirB:new FormControl('', [Validators.required])
+    incluirB:new FormControl('', [Validators.required]),
+    textCkeditor:new FormControl('', [Validators.required])
   });
 
   paginas:any = [{
@@ -65,6 +66,9 @@ export class PagesComponent implements OnInit {
   };
   get incluirB(){
     return this.pagina.get('incluirB'); 
+  };
+  get textCkeditor(){
+    return this.pagina.get('textCkeditor'); 
   };
 
   constructor() { }

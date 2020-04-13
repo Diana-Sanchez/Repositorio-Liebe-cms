@@ -199,7 +199,7 @@
               <div class="solicitud-datos">
                 Ingresa el contenido que deseas visualizar en tu página
               </div>
-              <ckeditor [editor]="Editor" data="Hello, world!"></ckeditor>
+              <ckeditor [editor]="Editor" data="Hello, world!" tagName ="textarea" formControlName= "textCkeditor"></ckeditor>
               <div class="modal-footer">
                 <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
                 <button [disabled]="!pagina.valid" (click)= "guardarPagina()" [ngClass]="{'btn-deshabilitado':pagina.invalid, 'confirmar':pagina.valid}" type="button">Confirmar</button>
