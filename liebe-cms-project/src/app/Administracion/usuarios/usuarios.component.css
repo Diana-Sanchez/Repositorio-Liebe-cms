@@ -131,6 +131,7 @@
   width: 100%;
   border-radius: 5px;
   padding: 5px 4px 6px 4px;
+  margin-bottom: 10px;
 }
 #contenedor-btn-registro{
   margin-top: 15px;
@@ -196,7 +197,7 @@
   
 }
 .nuevo-fondo{
-  background: linear-gradient(to right, #d2fafb, #105e62 );
+  background: linear-gradient(to right, #d2fafb, #4c8d91 );
 }
 .btn-acciones{
   background-color: transparent;

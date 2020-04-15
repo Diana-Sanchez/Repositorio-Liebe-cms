@@ -19,7 +19,7 @@
       <tr>
         
         <th scope="col">Nombre de usuario</th>
-        <th scope="col">Rol/tipo de usuario</th>
+        <th scope="col">Tipo de usuario</th>
         <th scope="col">Fecha creación</th>
         <th scope="col">Origen</th>
         <th scope="col">Acciones</th>
@@ -48,9 +48,9 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content nuevo-fondo">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">
-          Registro de nuevo usuario
-        </h5>
+        <div>
+          <img src="../../../assets/img/logo-oficial-liebe-dark.png" alt="">
+        </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -59,31 +59,36 @@
         <div id="contenedor-principal-usuarios">
           <div id="usuarios-cabecera">
             <div><i class="fas fa-users posicion-icono"></i></div>
-            <div id="indicador-pagina">Usuarios</div>
+            <div id="indicador-pagina">Nuevo usuario</div>
             <div id="explicacion-area">Añade usuarios a tu sitio.</div>
           </div>
           <form [formGroup]="usuario">
               
 
-              <label for="" class="lbl-registro-proyecto">Nombre de usuario</label>
-              <input formControlName ="nombre" [ngClass] = "{'input-error': nombre.invalid && (nombre.dirty || nombre.touched), 'input-success': nombre.valid}"type="text" id="txt-nombre-usuario" class="input-registro">
+              
+              <input formControlName ="nombre" [ngClass] = "{'input-error': nombre.invalid && (nombre.dirty || nombre.touched), 'input-success': nombre.valid}"type="text" id="txt-nombre-usuario" class="input-registro" placeholder="Nombre de usuario">
               <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error">
                 <span *ngIf = "nombre.errors.required">El campo está vacío</span>
                 <span *ngIf = "nombre.errors.maxlength">El nombre de usuario ingresado excede la cantidad de caracteres permitidos</span>
               </div>
 
-              <label for="" class="lbl-registro-proyecto">Rol/Tipo de usuario</label>
-              <input formControlName ="rol" [ngClass] = "{'input-error': rol.invalid && (rol.dirty || rol.touched), 'input-success': rol.valid}" type="text" id="txt-contrasena" class="input-registro">
-              <div *ngIf="rol.invalid && (rol.dirty || rol.touched)" class="error">
+              <label>Tipo de usuario</label><br>
+              <select class="input-registro" formControlName = "rol" [ngClass] = "{'input-error': rol.invalid && (rol.dirty || rol.touched), 'input-success': rol.valid}">
+                <option value="Administrador">Administrador</option>
+                <option value="Usuario normal">Usuario normal</option>
+              </select>
+              <div *ngIf = "rol.invalid && (rol.dirty || rol.touched)" class="error">
                 <span *ngIf = "rol.errors.required">El campo está vacío</span>
               </div>
-              <label for="" class="lbl-registro-proyecto">Contraseña provisional</label>
-              <input formControlName ="password" [ngClass] = "{'input-error': password.invalid && (password.dirty || password.touched), 'input-success': password.valid}" type="text" id="txt-contrasena" class="input-registro">
+
+              
+              <input formControlName ="password" [ngClass] = "{'input-error': password.invalid && (password.dirty || password.touched), 'input-success': password.valid}" type="text" id="txt-contrasena" class="input-registro" placeholder="Contraseña" type="password">
               <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
                 <span *ngIf = "password.errors.required">El campo está vacío</span>
                 <span *ngIf = "password.errors.maxlength">La contraseña ingresada excede la cantidad de caracteres permitidos</span>
                 <span *ngIf = "password.errors.minlength">La contraseña ingresada es muy corta</span>
               </div>
+              <div id="mensaje-valid" *ngIf="usuario.valid">Datos correctos</div>
           </form>
         </div>
       </div>
@@ -101,10 +106,10 @@
   <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="identificador.liebe">
+        <div>
           <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
         </div>
-        <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle"><b>Confirmación</b></h5>
+        <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle">Confirmación</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

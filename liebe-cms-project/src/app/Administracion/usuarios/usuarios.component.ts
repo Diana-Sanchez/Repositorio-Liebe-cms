@@ -16,7 +16,7 @@ export class UsuariosComponent implements OnInit {
 
 usuarios:any = [{
   nombre:'Diana Sánchez',
-  rol:'admin'
+  rol:'Administrador'
 }];
 
 get nombre(){
