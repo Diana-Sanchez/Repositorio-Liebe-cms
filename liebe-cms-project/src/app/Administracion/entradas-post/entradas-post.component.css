@@ -151,7 +151,8 @@
   font-size: 18px;
   color: #b2525c;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-top:2%;
+  margin-bottom:2%;
 }
 .modal-sm{
   max-width: 30% !important;
@@ -162,7 +163,7 @@
   margin-top: 5px;
 }
 .nuevo-fondo{
-  background: linear-gradient(to right, #d2fafb, #105e62 );
+  background: linear-gradient(to right, #d2fafb, #4c8d91 );
 }
 /* Estilos exclusivos para las validaciones */
 .error{
@@ -210,4 +211,9 @@
 .ilustracion{
   text-align: center;
 }
+.posicion-alert{
+  margin-top: 1%;
+  text-align: center;
+}
+ 
  

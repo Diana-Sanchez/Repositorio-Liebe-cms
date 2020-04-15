@@ -20,7 +20,7 @@ export class PagesComponent implements OnInit {
     incluirMenu:new FormControl('', [Validators.required]),
     incluirPie:new FormControl('', [Validators.required]),
     incluirB:new FormControl('', [Validators.required]),
-    textCkeditor:new FormControl('', [Validators.required])
+    textCkeditor:new FormControl('¡Hello, Liebe!', [Validators.required])
   });
 
   paginas:any = [{

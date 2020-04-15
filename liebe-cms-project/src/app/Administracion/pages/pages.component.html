@@ -199,7 +199,8 @@
               <div class="solicitud-datos">
                 Ingresa el contenido que deseas visualizar en tu página
               </div>
-              <ckeditor [editor]="Editor" data="Hello, world!" tagName ="textarea" formControlName= "textCkeditor"></ckeditor>
+              <ckeditor [editor]="Editor" data="¡Hello, Liebe!"  formControlName= "textCkeditor"></ckeditor>
+              
               <div *ngIf = "textCkeditor.invalid && (textCkeditor.dirty || textCkeditor.touched)" class="alert alert-warning posicion-alert" role="alert">
                 No puede crear una página estática en blanco
               </div>

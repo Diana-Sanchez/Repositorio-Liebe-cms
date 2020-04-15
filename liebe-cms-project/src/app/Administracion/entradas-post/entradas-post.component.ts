@@ -12,7 +12,8 @@ export class EntradasPostComponent implements OnInit {
   post = new FormGroup({
     nombre:new FormControl('', [Validators.required, Validators.maxLength(20)]),
     imagen:new FormControl('../../../assets/img/post.png', [Validators.required]),
-    permiso:new FormControl('', [Validators.required, Validators.maxLength(2)])
+    permiso:new FormControl('', [Validators.required]),
+    textCkeditorPost:new FormControl('¡Hello, Liebe!', [Validators.required])
   });
 
   posts:any = [];
@@ -26,8 +27,11 @@ export class EntradasPostComponent implements OnInit {
   get permiso(){
     return this.post.get('permiso');
   };
+  get textCkeditorPost(){
+    return this.post.get('textCkeditorPost');
+  };
   
-
+  
   constructor() { }
 
   ngOnInit(): void {

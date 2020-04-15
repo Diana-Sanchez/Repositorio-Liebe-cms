@@ -104,16 +104,23 @@
                     <div *ngIf = "imagen.invalid && (imagen.dirty || imagen.touched)" class="error">
                       <span *ngIf = "imagen.errors.required">El campo está vacío</span>
                     </div>
-                    <label for="">Habilitar comentarios Sí/No</label>
-                    <input class="input-pagina" formControlName ="permiso" [ngClass] = "{'input-error': permiso.invalid && (permiso.dirty || permiso.touched), 'input-success':permiso.valid}" type="text" placeholder="Habilitar comentarios">
+
+                    <label>¿Desea permitir comentarios?</label><br>
+                    <select class="input-pagina" formControlName = "permiso" [ngClass] = "{'input-error': permiso.invalid && (permiso.dirty || permiso.touched), 'input-success': permiso.valid}">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
                     <div *ngIf = "permiso.invalid && (permiso.dirty || permiso.touched)" class="error">
-                      <span *ngIf = "permiso.errors.maxlength">Su respuesta excede la cantidad caracteres permitidos</span>
                       <span *ngIf = "permiso.errors.required">El campo está vacío</span>
                     </div>
-              <br><div class="solicitud-datos">
+                    
+              <div class="solicitud-datos">
                 Ingresa el contenido que deseas visualizar en tu post.
               </div>
-              <ckeditor [editor]="Editor" data="Hello, Liebe"></ckeditor>
+              <ckeditor [editor]="Editor" formControlName= "textCkeditorPost"></ckeditor>
+              <div *ngIf = "textCkeditorPost.invalid && (textCkeditorPost.dirty || textCkeditorPost.touched)" class="alert alert-warning posicion-alert" role="alert">
+                No puede crear un post en blanco.
+              </div>
               <div id="mensaje-valid" *ngIf="post.valid">Datos correctos</div>
               <div class="modal-footer">
                 <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
