@@ -204,6 +204,7 @@
               <div *ngIf = "textCkeditor.invalid && (textCkeditor.dirty || textCkeditor.touched)" class="alert alert-warning posicion-alert" role="alert">
                 No puede crear una página estática en blanco
               </div>
+              <div id="mensaje-valid" *ngIf="pagina.valid">Datos correctos</div>
               <div class="modal-footer">
                 <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
                 <button [disabled]="!pagina.valid" (click)= "guardarPagina()" [ngClass]="{'btn-deshabilitado':pagina.invalid, 'confirmar':pagina.valid}" type="button">Confirmar</button>
