@@ -16,7 +16,6 @@
       margin-top: 10% !important;
     }
   }
-  
   .posicion-icono{
     float: left;
     margin-right: 10px;
@@ -225,7 +224,13 @@
     margin-top:20px;
   }
   .nuevo-fondo{
-    background: linear-gradient(to right, #d2fafb, #105e62 );
+    background: linear-gradient(to right, #d2fafb, #4c8d91 );
+  }
+  .adicional{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 2%;
   }
 
   /* Estilos exclusivos para las validaciones */
@@ -271,7 +276,9 @@
   font-size: 16px;
   font-weight: 600;
 }
+.posicion-alert{
+  margin-top: 1%;
+  text-align: center;
+}
 
- 
-  
-  /* Inicio de los estilos de todas las plantillas*/
+/* Fin de los estilos de todas las plantillas*/

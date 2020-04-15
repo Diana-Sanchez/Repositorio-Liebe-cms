@@ -14,6 +14,7 @@ export class PlantillasComponent implements OnInit {
     nombre:new FormControl('', [Validators.required, Validators.maxLength(20)]),
     descripcion:new FormControl('', [Validators.required, Validators.maxLength(40)]),
     imagen:new FormControl('../../../assets/img/salud-2.jpg', [Validators.required]),
+    textCkeditorPlantilla:new FormControl('¡Hello, Liebe!', [Validators.required]),
   });
 
   plantillas:any = [];
@@ -27,6 +28,9 @@ export class PlantillasComponent implements OnInit {
   get imagen(){
     return this.plantilla.get('imagen');
   };
+  get textCkeditorPlantilla(){
+    return this.plantilla.get('textCkeditorPlantilla');
+  };
 
   constructor() { }
 
@@ -38,7 +42,6 @@ export class PlantillasComponent implements OnInit {
     console.log(this.plantillas);
     console.log('Fomulario válido:', this.plantilla.valid );
     this.plantilla.reset(); 
-    
   };
   
 
