@@ -138,7 +138,7 @@
                       <span *ngIf = "palabrasClaves.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">¿Desea incluir como página padre?</label><br>
+                    <label class="instruccion">¿Deseas incluir como página padre?</label><br>
                     <select class="input-pagina" formControlName = "paginaPadre" [ngClass] = "{'input-error': paginaPadre.invalid && (paginaPadre.dirty || paginaPadre.touched), 'input-success': paginaPadre.valid}">
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
@@ -147,7 +147,7 @@
                       <span *ngIf = "paginaPadre.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">Seleccione el estado de la página</label><br>
+                    <label class="instruccion">Selecciona el estado de la página</label><br>
                     <select class="input-pagina" formControlName = "estado" [ngClass] = "{'input-error': estado.invalid && (estado.dirty || estado.touched), 'input-success': estado.valid}">
                       <option value="Activa">Activo</option>
                       <option value="Inactiva">Inactivo</option>
@@ -158,7 +158,7 @@
                   </div>
                   <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="solicitud-datos">Más opciones</div>
-                    <label class="instruccion">¿Desea incluir encabezado?</label><br>
+                    <label class="instruccion">¿Deseas incluir encabezado?</label><br>
                     <select class="input-pagina" formControlName = "incluirEncabezado" [ngClass] = "{'input-error': incluirEncabezado.invalid && (incluirEncabezado.dirty || incluirEncabezado.touched), 'input-success': incluirEncabezado.valid}">
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
@@ -167,7 +167,7 @@
                       <span *ngIf = "incluirEncabezado.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">¿Desea incluir menú?</label><br>
+                    <label class="instruccion">¿Deseas incluir menú?</label><br>
                     <select class="input-pagina" formControlName = "incluirMenu" [ngClass] = "{'input-error': incluirMenu.invalid && (incluirMenu.dirty || incluirMenu.touched), 'input-success': incluirMenu.valid}">
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
@@ -176,7 +176,7 @@
                       <span *ngIf = "incluirMenu.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">¿Desea incluir pie de página?</label><br>
+                    <label class="instruccion">¿Deseas incluir pie de página?</label><br>
                     <select class="input-pagina" formControlName = "incluirPie" [ngClass] = "{'input-error': incluirPie.invalid && (incluirPie.dirty || incluirPie.touched), 'input-success': incluirPie.valid}">
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
@@ -185,7 +185,7 @@
                       <span *ngIf = "incluirPie.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label class="instruccion">¿Desea incluir breadcrumb?</label><br>
+                    <label class="instruccion">¿Deseas incluir breadcrumb?</label><br>
                     <select class="input-pagina" formControlName = "incluirB" [ngClass] = "{'input-error': incluirB.invalid && (incluirB.dirty || incluirB.touched), 'input-success': incluirB.valid}">
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
@@ -202,7 +202,7 @@
               <ckeditor [editor]="Editor"   formControlName= "textCkeditor"></ckeditor>
               
               <div *ngIf = "textCkeditor.invalid && (textCkeditor.dirty || textCkeditor.touched)" class="alert alert-warning posicion-alert" role="alert">
-                No puede crear una página estática en blanco
+                No puedes crear una página estática en blanco.
               </div>
               <div id="mensaje-valid" *ngIf="pagina.valid">Datos correctos</div>
               <div class="modal-footer">

@@ -105,7 +105,7 @@
                       <span *ngIf = "imagen.errors.required">El campo está vacío</span>
                     </div>
 
-                    <label>¿Desea permitir comentarios?</label><br>
+                    <label>¿Deseas permitir comentarios?</label><br>
                     <select class="input-pagina" formControlName = "permiso" [ngClass] = "{'input-error': permiso.invalid && (permiso.dirty || permiso.touched), 'input-success': permiso.valid}">
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
@@ -119,7 +119,7 @@
               </div>
               <ckeditor [editor]="Editor" formControlName= "textCkeditorPost"></ckeditor>
               <div *ngIf = "textCkeditorPost.invalid && (textCkeditorPost.dirty || textCkeditorPost.touched)" class="alert alert-warning posicion-alert" role="alert">
-                No puede crear un post en blanco.
+                No puedes crear un post en blanco.
               </div>
               <div id="mensaje-valid" *ngIf="post.valid">Datos correctos</div>
               <div class="modal-footer">

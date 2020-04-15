@@ -111,16 +111,16 @@
               </div>
               <ckeditor [editor]="Editor" formControlName="textCkeditorPlantilla"></ckeditor>
               <div *ngIf = "textCkeditorPlantilla.invalid && (textCkeditorPlantilla.dirty || textCkeditorPlantilla.touched)" class="alert alert-warning posicion-alert" role="alert">
-                No puede crear una plantilla en blanco.
+                No puedes crear una plantilla en blanco.
               </div>
               <div id="mensaje-valid" *ngIf="plantilla.valid">Datos correctos</div>
               <div class="container">
                 <div class="row">
-                  <div class="col-sm">
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-6 col-lg-6">
                     <div class="adicional">CSS adicional</div>
                     <textarea class="adicional" rows="10"></textarea>
                   </div>
-                  <div class="col-sm">
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-6 col-lg-6">
                     <div class="adicional">JavaScript adicional</div>
                     <textarea class="adicional" rows="10"></textarea>
                   </div>
