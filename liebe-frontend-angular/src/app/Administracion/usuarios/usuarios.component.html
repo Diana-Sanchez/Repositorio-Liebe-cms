@@ -64,8 +64,6 @@
           </div>
           <form [formGroup]="usuario">
               
-
-              
               <input formControlName ="nombre" [ngClass] = "{'input-error': nombre.invalid && (nombre.dirty || nombre.touched), 'input-success': nombre.valid}"type="text" id="txt-nombre-usuario" class="input-registro" placeholder="Nombre de usuario">
               <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error">
                 <span *ngIf = "nombre.errors.required">El campo está vacío</span>
