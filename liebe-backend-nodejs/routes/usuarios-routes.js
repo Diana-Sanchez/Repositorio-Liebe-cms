@@ -58,7 +58,7 @@ router.put('/:id', function(req, res){
             password: req.body.password
         }
     ).then(result=>{
-        res.send();
+        res.send(result);
         res.end();
     }).catch(error=>{
         res.send(error);
