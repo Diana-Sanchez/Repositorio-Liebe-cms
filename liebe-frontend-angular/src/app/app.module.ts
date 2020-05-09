@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -83,7 +83,8 @@ import { FooterComponent } from './UsuarioRegistrado/footer/footer.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    CKEditorModule
+    CKEditorModule,
+    HttpClientModule
     
     
     

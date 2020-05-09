@@ -21,7 +21,6 @@
         <th scope="col">Nombre de usuario</th>
         <th scope="col">Tipo de usuario</th>
         <th scope="col">Fecha creación</th>
-        <th scope="col">Origen</th>
         <th scope="col">Acciones</th>
       </tr>
     </thead>
@@ -29,8 +28,7 @@
       <tr *ngFor="let item of usuarios">
         <td>{{item.nombre}}</td>
         <td>{{item.rol}}</td>
-        <td>14/02/2020</td>
-        <td> - </td>
+        <td>{{item.fecha | date:'dd/MM/yyyy' }}</td>
         <td>
           <div class="cont-btn-acciones">
             <button class="btn-acciones"><i class="fas fa-pencil-alt ver"></i></button>
@@ -70,6 +68,18 @@
                 <span *ngIf = "nombre.errors.maxlength">El nombre de usuario ingresado excede la cantidad de caracteres permitidos</span>
               </div>
 
+              <input formControlName ="apellido" [ngClass] = "{'input-error': apellido.invalid && (apellido.dirty || apellido.touched), 'input-success': apellido.valid}"type="text" id="txt-apellido-usuario" class="input-registro" placeholder="apellido de usuario">
+              <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="error">
+                <span *ngIf = "apellido.errors.required">El campo está vacío</span>
+                <span *ngIf = "apellido.errors.maxlength">El apellido del usuario ingresado excede la cantidad de caracteres permitidos</span>
+              </div>
+
+              <input formControlName ="correo" [ngClass] = "{'input-error': correo.invalid && (correo.dirty || correo.touched), 'input-success': correo.valid}"type="text" id="txt-correo-usuario" class="input-registro" placeholder="correo de usuario">
+              <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="error">
+                <span *ngIf = "correo.errors.required">El campo está vacío</span>
+                <span *ngIf = "correo.errors.pattern">el correo ingresado no es válido</span>
+              </div>
+
               <label>Tipo de usuario</label><br>
               <select class="input-registro" formControlName = "rol" [ngClass] = "{'input-error': rol.invalid && (rol.dirty || rol.touched), 'input-success': rol.valid}">
                 <option value="Administrador">Administrador</option>
@@ -79,7 +89,6 @@
                 <span *ngIf = "rol.errors.required">El campo está vacío</span>
               </div>
 
-              
               <input formControlName ="password" [ngClass] = "{'input-error': password.invalid && (password.dirty || password.touched), 'input-success': password.valid}" type="text" id="txt-contrasena" class="input-registro" placeholder="Contraseña" type="password">
               <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
                 <span *ngIf = "password.errors.required">El campo está vacío</span>

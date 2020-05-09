@@ -4,8 +4,10 @@ var usuario = require('../models/usuario');
 
 // Creación de un nuevo usuario y envío a la base de datos
 router.post('/', function(req, res){
+    
     let u = new usuario(
         {
+            fecha:req.body.fecha,
             nombre: req.body.nombre,
             apellido:req.body.apellido,
             correo:req.body.correo,
