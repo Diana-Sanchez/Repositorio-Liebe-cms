@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
@@ -81,10 +82,11 @@ import { FooterComponent } from './UsuarioRegistrado/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     ReactiveFormsModule,
     FormsModule,
     CKEditorModule,
-    HttpClientModule
+    HttpClientModule,
     
     
     

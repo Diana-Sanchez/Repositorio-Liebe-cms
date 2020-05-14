@@ -32,7 +32,29 @@
         <td>
           <div class="cont-btn-acciones">
             <button class="btn-acciones"><i class="fas fa-pencil-alt ver"></i></button>
-            <button class="btn-acciones" data-toggle="modal" data-target="#confirmacion-borrar"><i class="fas fa-trash-alt ver"></i></button>
+            <button class="btn-acciones" data-toggle="modal" data-target="#confirmacion-borrar" ><i class="fas fa-trash-alt ver"></i></button>
+            <div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div>
+                      <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
+                    </div>
+                    <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle">Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                   ¿Estás seguro que deseas eliminar este usuario?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="confirmar" (click) = "eliminar(item._id)" data-dismiss="modal">Confirmar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </td>
       </tr>
@@ -101,7 +123,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="cancelar" data-dismiss="modal">Cerrar</button>
-        <button [disabled]="!usuario.valid" (click)= "guardarUsuario()" [ngClass]="{'btn-deshabilitado':usuario.invalid, 'confirmar':usuario.valid}">Guardar nuevo usuario</button>
+        <button [disabled]="!usuario.valid" (click)= "guardarUsuario()" data-dismiss="modal" [ngClass]="{'btn-deshabilitado':usuario.invalid, 'confirmar':usuario.valid}">Guardar nuevo usuario</button>
       </div>
     </div>
   </div>
@@ -109,27 +131,6 @@
 <!-- Fin de la ventana modal para añadir un nuevo usuario-->
 
 <!--Inicio de la ventana modal para confirmar la eliminación de un comentario -->
-<div class="modal fade" id="confirmacion-borrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered  modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div>
-          <img src="../../../assets/img/logo-oficial-liebe-dark-small.png" alt="">
-        </div>
-        <h5 class="modal-title titulo-warning" id="exampleModalCenterTitle">Confirmación</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       ¿Estás seguro que deseas eliminar este usuario?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="cancelar" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="confirmar">Confirmar</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Fin del componente usuarios/administración de Liebe-->
